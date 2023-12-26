@@ -158,3 +158,6 @@ cython_debug/
 
 # For maturin usage in this repo
 Cargo.lock
+
+# Ignore osmnx cache
+cache/

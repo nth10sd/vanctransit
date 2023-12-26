@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from logging import INFO as INFO_LOG_LEVEL
 
+import osmnx as ox
+
 # pylint: disable=no-name-in-module
 from vanctransit._vanctransit import print_something
 from vanctransit._vanctransit import sum_as_string
@@ -22,3 +24,7 @@ def main() -> None:
     RUN_LOG.info("Rust functions below:")
     print_something()
     RUN_LOG.info(sum_as_string(2, 3))
+
+    ox.plot_graph(
+        ox.graph_from_place("Vancouver, British Columbia", network_type="walk")
+    )
