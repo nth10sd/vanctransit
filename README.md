@@ -1,77 +1,84 @@
-(Insert GitHub Actions/codecov status badges here)
+PENDING
 
 # README
 
+This demo was tested with Python 3.10 - 3.12.
+
 ## Prerequisites
-Create a new repository for your module on GitHub with no files.
+
+Ensure Python is installed, especially on Windows.
+
+Install Rust by following the [instructions on their website](https://www.rust-lang.org/).
+
+After Rust installation,
+```
+rustup --version
+```
+
+You should have at least the following output:
+```
+rustup 1.26.0 (5af9b9484 2023-04-05)
+info: This is the version for the rustup toolchain manager, not the rustc compiler.
+info: The currently active `rustc` version is `rustc 1.74.0 (79e9716c9 2023-11-13)`
+```
+
+Ensure you do not have any existing `venv` at `~/venv-vanctransit`.
 
 Create a new Python 3.10 (install it beforehand) virtual environment using `venv` and switch to it.
 
+Linux or macOS:
 ```
-python3.10 -u -m venv ~/venv-vanctransit ;
-```
-
-```
-source ~/venv-vanctransit/bin/activate && pip install --upgrade pip ;
+python3.10 -u -m venv --upgrade-deps ~/venv-vanctransit ; . ~/venv-vanctransit/bin/activate ;
 ```
 
-## Create a new module
-
-Running in the above venv:
-
+Windows:
 ```
-(venv-vanctransit) $ git clone git@github.com:nth10sd/vanctransit.git
-
-(venv-vanctransit) $ git clone REPLACEME
-                             ^^^^^^^^^
-
-(venv-vanctransit) $ cd REPLACEME
-                      ^^^^^^^^^
-
-(venv-vanctransit) $ cp -r ../vanctransit/* ../vanctransit/.gitignore ../vanctransit/.vulture_allowlist ../vanctransit/.github . && rm -rf build/ *.egg*-info/
-
-(venv-vanctransit) $ mv vanctransit/ REPLACEME
-                                 ^^^^^^^^^
-
-(venv-vanctransit) $ find . ! \( -path ./.git -prune \) -type f | xargs sed -i 's/vanctransit/REPLACEME/g'
-                                                                                          ^^^^^^^^^
+pushd ~ ; python -u -m venv --upgrade-deps venv-vanctransit ; popd ; Set-ExecutionPolicy Unrestricted -Scope Process; ~/venv-vanctransit/Scripts/Activate.ps1 ; ~/venv-vanctransit/Scripts/Activate.ps1 ;
 ```
 
-Install your module by running:
+Install [cargo-binstall](https://github.com/cargo-bins/cargo-binstall).
 
+Make sure Cargo is usable and use `cargo-binstall` to install `cargo-tarpaulin` (code coverage).
 ```
-(venv-vanctransit) $ pip install --upgrade -r requirements.txt && pip install --upgrade -e .
-```
-
-Run your new module using:
-
-```
-(venv-vanctransit) $ python -u -m REPLACEME
-                                ^^^^^^^^^
+cargo binstall -y cargo-tarpaulin
 ```
 
-Delete the CodeQL steps in the GitHub Actions `.yml` workflow settings file if they are not required.
+Clone the repository and cd into it (replace `<repo>` with desired location):
+```
+$ git clone <repo> ; cd <repo> ;
+```
+
+## maturin-related (Rust)
+
+Development command for Linux and Windows:
+```
+cargo clippy --all-targets -- -D warnings ; python -u -m pip install --upgrade pip ; pip install --upgrade -r requirements.txt ; cargo tarpaulin --all-targets --count --exclude-files=target/* --engine=llvm --fail-under=80 --ignored --no-dead-code --out=stdout --skip-clean --target-dir=target/tarpaulin-target/ ; maturin develop --release --strip ;
+```
+
+Development command for macOS (which uses `zsh`):
+```
+cargo clippy --all-targets -- -D warnings ; python -u -m pip install --upgrade pip ; pip install --upgrade -r requirements.txt ; setopt +o nomatch ; cargo tarpaulin --all-targets --count --exclude-files=target/* --engine=llvm --fail-under=80 --ignored --no-dead-code --out=stdout --skip-clean --target-dir=target/tarpaulin-target/ ; setopt -o nomatch ; maturin develop --release ;
+```
+
+Switch `maturin develop` for debug Rust code with symbols if needed.
 
 ## Run tools on your package
 
 (All commands here must be run within the `venv`, in the main repository directory - not any subfolders)
-
-For linters only:
-```
-for TOOL in ruff mypy pylint ; do "$TOOL" $(python -c "from pathlib import Path; exec('try: import tomllib\nexcept ImportError: import tomli as tomllib\nwith Path(\"pyproject.toml\").open(mode=\"rb\") as fp:\n cfg = tomllib.load(fp)\n print(f\'{cfg[\"project\"][\"name\"]}/{\" tests/\" if Path(\"tests/\").is_dir() else \"\"}\')')") ; done;
-```
 
 For comprehensive tests and all linters:
 ```
 python -u -m pytest --cov --mypy --pylint --ruff --ruff-format
 ```
 
-For comprehensive tests and all linters **except** slow tests:
+## Running
+
+Run the module using:
 ```
-python -u -m pytest --cov --mypy --pylint --ruff --ruff-format -m "not slow"
+python -u -m vanctransit
 ```
 
-## Documentation generation via Sphinx
+## Documentation generation via Sphinx (Linux-only)
 
 * Change into `docs/` folder: `cd docs/`
 * Run generation command - you **must** first be in the `docs/` directory: `./gen-sphinx-html.sh`

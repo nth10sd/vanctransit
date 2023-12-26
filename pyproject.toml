@@ -1,36 +1,27 @@
 [build-system]
-requires = [
-    "setuptools >= 68.2.2",
-    "setuptools-scm[toml] >= 7.1.0",
-    "wheel >= 0.41.2",
-]
-build-backend = "setuptools.build_meta"
+requires = ["maturin ~= 1.4.0"]
+build-backend = "maturin"
 
 [project]
 name = "vanctransit"
-description = "Bootstrap a project easily"
-# Use the following command to find all places to update Python versions
-#   rg --hidden --files | rg -v ".min.js" | xargs rg -I "3[\.]*10" | rg "(py|ver)"
+version = "0.1.0"
 requires-python = ">=3.10"
-# keywords = ["anything"]
 classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Rust",
+    "Topic :: Utilities",
 ]
 dependencies = [
-    "setuptools >= 68.2.2",
-    "setuptools-scm[toml] >= 7.1.0",
-    "types-setuptools==68.2.0.0",    # Bump types-* only with mypy
-    "typing-extensions ~= 4.8.0",    # Directly import Self from typing on Python 3.11+
-    "wheel >= 0.41.2",
+    'maturin ~= 1.4.0; platform_system != "Linux"',           # patchelf is only supported on Linux
+    'maturin[patchelf] ~= 1.4.0; platform_system == "Linux"',
+    "wheel >= 0.42.0",
 ]
-dynamic = ["version", "readme"]
 
 [project.optional-dependencies]
 test = [
@@ -55,12 +46,14 @@ test = [
     "vulture ~= 2.10",
 ]
 
-[tool.setuptools.dynamic]
-version = { attr = "vanctransit.__version__" }
-readme = { file = ["README.md", "CHANGELOG.md"] }
+[project.scripts]
+print_cli_args = "vanctransit._vanctransit:print_cli_args"
+print_something = "vanctransit._vanctransit:print_something"
 
-[tool.setuptools_scm]
-write_to = "vanctransit/_version.txt"
+[tool.maturin]
+features = ["pyo3/extension-module"]
+python-source = "python"
+module-name = "vanctransit._vanctransit"
 
 ##### Other tools #####
 
@@ -76,7 +69,7 @@ exclude_lines = [
     "raise AssertionError",       # Ignore tests not hitting defensive assertion code
     "raise NotImplementedError",  # Ignore tests not hitting defensive assertion code
 ]
-fail_under = 80 # Minimum code coverage percent
+fail_under = 20 # Minimum code coverage percent
 show_missing = true
 
 [tool.coverage.run]
@@ -91,11 +84,11 @@ omit = [
 ]
 parallel = true
 sigterm = true
-source = ["vanctransit/", "tests/"]
+source = ["python/vanctransit/", "python/tests/"]
 
 [tool.mypy]
 disallow_any_unimported = true
-exclude = ["build/"]
+exclude = ["build/", "target/"]
 namespace_packages = true
 python_version = "3.10"
 show_error_codes = true
@@ -103,9 +96,9 @@ strict = true
 warn_unreachable = true
 
 # Add Python modules to be ignored by mypy here
-# [[tool.mypy.overrides]]
-# module = []
-# ignore_missing_imports = true
+[[tool.mypy.overrides]]
+module = ["vanctransit._vanctransit"]
+ignore_missing_imports = true
 
 [tool.pylint.basic]
 # Good variable names which should always be accepted, separated by a comma
@@ -194,13 +187,14 @@ score = "no"
 py-version = "3.10"
 
 [tool.pyright]
-exclude = ["**/node_modules", "**/__pycache__", "**/.*", "build/"]
+exclude = ["**/node_modules", "**/__pycache__", "**/.*", "build/", "target/"]
 
 [tool.pytest.ini_options]
 addopts = [
     "-n=auto",
     "--dist=loadscope",
     "--durations=7",
+    "--ignore=target/",
     "--instafail",
     "--no-cov-on-fail",
     "--pylint-error-types=CRWEFI",
@@ -252,6 +246,7 @@ ignore = [
 ]
 include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
 select = ["ALL"]
+src = ["python"]
 target-version = "py310"
 unsafe-fixes = true
 

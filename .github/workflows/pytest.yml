@@ -17,7 +17,7 @@ jobs:
       matrix:
         # Uncomment this line if we are running on multiple operating systems
         operating-system: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.10", "3.11"]
+        python-version: ["3.10", "3.11", "3.12"]
 
     steps:
       - uses: actions/checkout@v3
@@ -55,6 +55,26 @@ jobs:
       #   with:
       #       ssh-private-key: ${{ secrets.ZZBASE_TOKEN }}
 
+      - name: Rustup latest 64-bit Rust, as it seems faster than Rust-related workflows
+        run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
+      - name: Update current environment to access Rust compiler
+        if: startsWith(runner.os, 'Linux') || startsWith(runner.os, 'macOS')
+        run: source "$HOME"/.cargo/env ;
+      - name: Update current environment to access Rust compiler
+        if: startsWith(runner.os, 'Windows')
+        run: $addPath = "$env:USERPROFILE\.cargo\bin" ; $scope = 'User' ; [Environment]::SetEnvironmentVariable('PATH', ([Environment]::GetEnvironmentVariable('PATH', $scope) + ";$addPath"), $scope) ; $env:PATH += ";$addPath" ;
+
+      - name: Install cargo-binstall
+        if: startsWith(runner.os, 'Linux') || startsWith(runner.os, 'macOS')
+        run: curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+      - name: Install cargo-binstall
+        if: startsWith(runner.os, 'Windows')
+        run: Set-ExecutionPolicy Unrestricted -Scope Process; iex (iwr "https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.ps1").Content
+      - name: Install useful cargo utilities
+        run: cargo binstall -y cargo-tarpaulin ripgrep sd ;
+      - name: Run cargo clippy (Linter-like checker for Rust code)
+        run: cargo clippy --all-targets -- -D warnings ;
+
       - name: Install pip prerequisites
         if: steps.pip-cache.outputs.cache-hit != 'true'
         run: python -u -m pip install --upgrade pip setuptools wheel ;
@@ -73,6 +93,10 @@ jobs:
       - name: Install package in development mode
         if: steps.pip-cache.outputs.cache-hit != 'true'
         run: pip install --upgrade -e . ;
+      - name: Run cargo tarpaulin (code coverage for Rust code), note that macOS runs bash on CI, not zsh
+        run: cargo tarpaulin --all-targets --count --exclude-files=target/* --engine=llvm --fail-under=80 --ignored --no-dead-code --out=stdout --skip-clean --target-dir=target/tarpaulin-target/ ;
+      - name: Install using maturin, optimized Rust code
+        run: env VIRTUAL_ENV=$(python -c 'import sys; print(sys.base_prefix)') maturin develop --release ;
 
       - name: Run with ruff
         run: python -u -m ruff .
@@ -93,13 +117,13 @@ jobs:
       - name: Search for existing linter ignore lines in Python
         if: startsWith(runner.os, 'Linux')
         run: |
-          rg -t py --stats "(?:(?:flake8|noqa|pylint|pyright|type): *(?:disable|ignore|noqa|[a-zA-Z]+[0-9]+)| Any|REPLACEME)" \
+          rg -t py --stats "(?:(?:flake8|noqa|pylint|pyright|type): *(?:disable|ignore|noqa|[a-zA-Z]+[0-9]+)| Any|vanctransit)" \
             $(find . -type f -name "*.py" -not -path "./build/lib/*" ! -name "conf_correct.py") || true
       - name: Ensure we are not increasing the number of ignore lines as a guideline
         if: startsWith(runner.os, 'Linux')
         run: |
           if [ $(rg -t py --stats \
-                    "(?:(?:flake8|noqa|pylint|pyright|type): *(?:disable|ignore|noqa|[a-zA-Z]+[0-9]+)| Any|REPLACEME)" \
+                    "(?:(?:flake8|noqa|pylint|pyright|type): *(?:disable|ignore|noqa|[a-zA-Z]+[0-9]+)| Any|vanctransit)" \
                     $(find . -type f -name "*.py" -not -path "./build/lib/*" ! -name "conf_correct.py") \
                       | awk "/ matches/ && "\!"/ contained matches/" \
                       | cut -d " " -f1) -lt 5 ] ;
