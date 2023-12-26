@@ -30,7 +30,7 @@ test = [
     'coverage[toml] ~= 7.3.4; python_version <= "3.10"',
     "matplotlib ~= 3.8.2",
     "mypy ~= 1.7.1",
-    "osmnx ~= 1.8.0",
+    "osmnx ~= 1.8.0",                                    # Enable mypy checking in >=2.x
     "pylint ~= 3.0.3",
     "pyqt6 ~= 6.6.1",
     'pyright==1.1.342; platform_system == "Linux"',
@@ -100,7 +100,7 @@ warn_unreachable = true
 
 # Add Python modules to be ignored by mypy here
 [[tool.mypy.overrides]]
-module = ["vanctransit._vanctransit"]
+module = ["osmnx", "vanctransit._vanctransit"]
 ignore_missing_imports = true
 
 [tool.pylint.basic]
