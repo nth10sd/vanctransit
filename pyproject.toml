@@ -32,7 +32,7 @@ test = [
     "mypy ~= 1.7.1",
     "osmnx ~= 1.8.0",
     "pylint ~= 3.0.3",
-    "pyqt5 ~= 5.15.10",
+    "pyqt6 ~= 6.6.1",
     'pyright==1.1.342; platform_system == "Linux"',
     "pytest ~= 7.4.3",
     "pytest-cov ~= 4.1.0",
