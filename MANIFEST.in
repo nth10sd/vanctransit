@@ -1,0 +1,4 @@
+include vanctransit/_version.txt
+include vanctransit/py.typed
+
+prune */tests
