@@ -1,4 +1,4 @@
-PENDING
+[![codecov](https://codecov.io/gh/nth10sd/vanctransit/graph/badge.svg?token=H94BWJ1SOY)](https://codecov.io/gh/nth10sd/vanctransit)
 
 # README
 
