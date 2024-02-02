@@ -49,7 +49,11 @@ def fast_py_truncate_file_lines(filename: Path | str, lines_wanted: int) -> None
     with Path(filename).open("r+", encoding="utf-8", errors="surrogateescape") as f:
         blackhole: Callable[[Iterable[Any]], None] = deque((), 0).extend
         file_iterator = iter(f.readline, "")
-        blackhole(islice(file_iterator, lines_wanted))
+        blackhole(
+            islice(  # type: ignore[reportArgumentType,unused-ignore]
+                file_iterator, lines_wanted
+            )
+        )
         f.truncate(f.tell())
 
 
