@@ -1,5 +1,5 @@
 [build-system]
-requires = ["maturin ~= 1.4.0"]
+requires = ["maturin ~= 1.5.0"]
 build-backend = "maturin"
 
 [project]
@@ -19,8 +19,8 @@ classifiers = [
 ]
 dependencies = [
     "matplotlib ~= 3.8.2",
-    'maturin ~= 1.4.0; platform_system != "Linux"',           # patchelf is only supported on Linux
-    'maturin[patchelf] ~= 1.4.0; platform_system == "Linux"',
+    'maturin ~= 1.5.0; platform_system != "Linux"',           # patchelf is only supported on Linux
+    'maturin[patchelf] ~= 1.5.0; platform_system == "Linux"',
     "osmnx ~= 1.8.0",                                         # Enable mypy checking in >=2.x
     "pyqt6 ~= 6.6.1",
     "wheel >= 0.42.0",
@@ -29,22 +29,22 @@ dependencies = [
 [project.optional-dependencies]
 test = [
     "bashate ~= 2.1.1",
-    'coverage ~= 7.4.1; python_version >= "3.11"',
-    'coverage[toml] ~= 7.4.1; python_version <= "3.10"',
+    'coverage ~= 7.4.4; python_version >= "3.11"',
+    'coverage[toml] ~= 7.4.4; python_version <= "3.10"',
     "mypy ~= 1.7.1",
-    "pylint ~= 3.0.3",
-    'pyright==1.1.351; platform_system == "Linux"',
-    "pytest ~= 8.0.1",
+    "pylint ~= 3.1.0",
+    'pyright==1.1.355; platform_system == "Linux"',
+    "pytest ~= 8.1.1",
     "pytest-cov ~= 4.1.0",
     "pytest-dependency ~= 0.6.0",
     "pytest-instafail ~= 0.5.0",
     "pytest-mypy ~= 0.10.3",
     "pytest-pylint ~= 0.21.0",
     "pytest-randomly ~= 3.15.0",
-    "pytest-ruff ~= 0.2.1",
+    "pytest-ruff ~= 0.3.1",
     "pytest-xdist ~= 3.5.0",
-    "refurb ~= 1.28.0",
-    "ruff ~= 0.2.2",
+    "refurb ~= 2.0.0",
+    "ruff ~= 0.3.3",
     "sphinx ~= 7.2.6",
     "vulture ~= 2.11",
 ]
