@@ -96,7 +96,7 @@ jobs:
         run: env VIRTUAL_ENV=$(python -c 'import sys; print(sys.base_prefix)') maturin develop --release ;
 
       - name: Run with ruff
-        run: python -u -m ruff .
+        run: python -u -m ruff check .
       - name: Run with refurb to find code that can be written in a more modern way
         if: startsWith(runner.os, 'Linux')
         run: |
