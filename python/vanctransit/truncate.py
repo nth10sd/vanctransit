@@ -21,9 +21,10 @@ def py_truncate_file_lines(filename: Path | str, lines_wanted: int) -> None:
     :param lines_wanted: Desired number of lines to retain
     """
     temp_file = Path(filename).with_suffix("").with_suffix(f"{Path(filename).suffix}~")
-    with Path(filename).open(encoding="utf-8") as f, temp_file.open(
-        "w", encoding="utf-8"
-    ) as g:
+    with (
+        Path(filename).open(encoding="utf-8") as f,
+        temp_file.open("w", encoding="utf-8") as g,
+    ):
         for idx, line in enumerate(f.readlines()):
             if idx >= lines_wanted:
                 break
