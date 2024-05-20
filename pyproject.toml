@@ -1,5 +1,5 @@
 [build-system]
-requires = ["maturin ~= 1.5.0"]
+requires = ["maturin ~= 1.5.1"]
 build-backend = "maturin"
 
 [project]
@@ -19,8 +19,8 @@ classifiers = [
 ]
 dependencies = [
     "matplotlib ~= 3.8.2",
-    'maturin ~= 1.5.0; platform_system != "Linux"',           # patchelf is only supported on Linux
-    'maturin[patchelf] ~= 1.5.0; platform_system == "Linux"',
+    'maturin ~= 1.5.1; platform_system != "Linux"',           # patchelf is only supported on Linux
+    'maturin[patchelf] ~= 1.5.1; platform_system == "Linux"',
     "osmnx ~= 1.8.0",                                         # Enable mypy checking in >=2.x
     "pyqt6 ~= 6.6.1",
     "wheel >= 0.42.0",

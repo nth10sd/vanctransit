@@ -1,6 +1,7 @@
 use examples::samples::{print_cli_args, print_something, sum_as_string};
 use file_helpers::truncate::truncate_file_lines;
 use pyo3::prelude::{pymodule, wrap_pyfunction, PyModule, PyResult, Python};
+use pyo3::Bound;
 
 mod examples {
     pub mod samples;
@@ -12,7 +13,7 @@ mod file_helpers {
 /// A Python module implemented in Rust.
 #[cfg(not(tarpaulin_include))]
 #[pymodule]
-fn _vanctransit(_py: Python, m: &PyModule) -> PyResult<()> {
+fn _vanctransit(_py: Python, m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(truncate_file_lines, m)?)?;
 
     // Examples

@@ -1,4 +1,4 @@
-use pyo3::prelude::{pyfunction, PyResult, Python};
+use pyo3::prelude::{pyfunction, PyAnyMethods, PyResult, Python};
 use std::env;
 
 /// Formats the sum of two numbers as string.
@@ -24,7 +24,7 @@ pub fn print_cli_args(py: Python) -> PyResult<()> {
     // `["/home/ferris/.venv/bin/print_cli_args", "a", "b", "c"])`
     println!(
         "{:?}",
-        py.import("sys")?
+        py.import_bound("sys")?
             .getattr("argv")?
             .extract::<Vec<String>>()?
     );
