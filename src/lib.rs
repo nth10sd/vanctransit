@@ -1,6 +1,7 @@
 use examples::samples::{print_cli_args, print_something, sum_as_string};
 use file_helpers::truncate::truncate_file_lines;
-use pyo3::prelude::{pymodule, wrap_pyfunction, PyModule, PyResult, Python};
+use pyo3::prelude::{pymodule, wrap_pyfunction};
+use pyo3::prelude::{PyModule, PyModuleMethods, PyResult, Python};
 use pyo3::Bound;
 
 mod examples {
