@@ -17,7 +17,8 @@ version = "0.22.2"
 features = ["abi3-py310"] # Python 3.10
 
 [lints.rust]
-unsafe_code = "forbid" # Allow unsafe code only if you understand what you are doing
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tarpaulin_include)'] }
+unsafe_code = "forbid"                                                       # Allow unsafe code only if you understand what you are doing
 
 [profile.release]
 # debug = true      # Debug symbols for our profiler.
