@@ -65,10 +65,13 @@ jobs:
         if: startsWith(runner.os, 'Windows')
         run: $addPath = "$env:USERPROFILE\.cargo\bin" ; $scope = 'User' ; [Environment]::SetEnvironmentVariable('PATH', ([Environment]::GetEnvironmentVariable('PATH', $scope) + ";$addPath"), $scope) ; $env:PATH += ";$addPath" ;
 
-      - name: Install cargo-binstall
-        if: startsWith(runner.os, 'Linux') || startsWith(runner.os, 'macOS')
+      - name: Install cargo-binstall on Linux platforms
+        if: startsWith(runner.os, 'Linux')
         run: curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
-      - name: Install cargo-binstall
+      - name: Install cargo-binstall on macOS platforms
+        if: startsWith(runner.os, 'macOS')
+        run: brew install cargo-binstall
+      - name: Install cargo-binstall on Windows platforms
         if: startsWith(runner.os, 'Windows')
         run: Set-ExecutionPolicy Unrestricted -Scope Process; iex (iwr "https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.ps1").Content
       - name: Install useful cargo utilities
