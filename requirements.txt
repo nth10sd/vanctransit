@@ -60,7 +60,7 @@ markupsafe==2.1.5
     # via jinja2
 matplotlib==3.8.4
     # via vanctransit (pyproject.toml)
-maturin[patchelf]==1.7.1 ; platform_system == 'Linux'
+maturin==1.7.1
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
@@ -97,8 +97,6 @@ pandas==2.2.2
     # via
     #   geopandas
     #   osmnx
-patchelf==0.17.2.1 ; platform_system == 'Linux'
-    # via maturin
 pbr==6.0.0
     # via bashate
 pillow==10.4.0
