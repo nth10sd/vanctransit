@@ -20,8 +20,9 @@ classifiers = [
 dependencies = [
     "matplotlib ~= 3.8.2",
     "maturin ~= 1.7.1",
-    "osmnx ~= 1.8.0",                                         # Enable mypy checking in >=2.x
+    "osmnx ~= 1.8.0",      # Enable mypy checking in >=2.x
     "pyqt6 ~= 6.6.1",
+    "uv >= 0.3.2",         # CI looks out for the comparison: >=
     "wheel >= 0.42.0",
 ]
 
