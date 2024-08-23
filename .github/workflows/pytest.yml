@@ -69,19 +69,14 @@ jobs:
         run: cargo clippy --all-targets -- -D warnings ;
 
       - name: Install uv
-        if: steps.pip-cache.outputs.cache-hit != 'true'
         run: python -u -m pip install --upgrade uv==$(cat pyproject.toml | awk -F ' >= ' '/uv >= / {print $2}' | awk -F '",' '{print $1}')
       - name: Remove subdomain to make requirements.txt setup work in CI
-        if: steps.pip-cache.outputs.cache-hit != 'true'
         run: python -c 'import fileinput; [print(line.partition("git@")[0] + "git@github.com/" + line.partition(".github.com/")[-1] if (".github.com/" in line and not line.startswith("#")) else line, end="") for line in fileinput.input(inplace=True)]' requirements.txt
       - name: Print differences in git repository needed to make CI work
-        if: steps.pip-cache.outputs.cache-hit != 'true'
         run: git diff
       - name: Install requirements from possibly-changed requirements.txt, and package in development mode
-        if: steps.pip-cache.outputs.cache-hit != 'true'
         run: uv pip install -r requirements.txt -e .
       - name: Revert requirements.txt if changed
-        if: steps.pip-cache.outputs.cache-hit != 'true'
         run: git checkout -- requirements.txt
 
       - name: Run cargo tarpaulin (code coverage for Rust code), note that macOS runs bash on CI, not zsh
