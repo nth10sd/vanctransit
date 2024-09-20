@@ -64,7 +64,7 @@ maturin==1.7.1
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
-mypy==1.11.1
+mypy==1.11.2
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-mypy
@@ -107,7 +107,7 @@ pluggy==1.5.0
     # via pytest
 pygments==2.18.0
     # via sphinx
-pylint==3.2.6
+pylint==3.2.7
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-pylint
@@ -123,9 +123,9 @@ pyqt6-qt6==6.7.2
     # via pyqt6
 pyqt6-sip==13.8.0
     # via pyqt6
-pyright==1.1.377 ; platform_system == 'Linux'
+pyright==1.1.381 ; platform_system == 'Linux'
     # via vanctransit (pyproject.toml)
-pytest==8.3.2
+pytest==8.3.3
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-cov
@@ -167,7 +167,7 @@ requests==2.32.3
     # via
     #   osmnx
     #   sphinx
-ruff==0.6.2
+ruff==0.6.5
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
@@ -216,9 +216,9 @@ tzdata==2024.1
     # via pandas
 urllib3==2.2.2
     # via requests
-uv==0.3.2
+uv==0.4.13
     # via vanctransit (pyproject.toml)
-vulture==2.11
+vulture==2.12
     # via vanctransit (pyproject.toml)
 wheel==0.44.0
     # via vanctransit (pyproject.toml)
