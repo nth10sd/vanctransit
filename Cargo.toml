@@ -16,6 +16,13 @@ testdir = "0.9.1"
 version = "0.22.3"
 features = ["abi3-py310"] # Python 3.10
 
+[lints.clippy]
+all = "warn"
+pedantic = "warn"
+nursery = "warn"
+
+redundant_pub_crate = { level = "allow", priority = 1 } # Seems needed by maturin
+
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tarpaulin_include)'] }
 unsafe_code = "forbid"                                                       # Allow unsafe code only if you understand what you are doing

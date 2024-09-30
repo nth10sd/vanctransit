@@ -3,11 +3,13 @@ use std::env;
 
 /// Formats the sum of two numbers as string.
 #[pyfunction]
+#[allow(clippy::unnecessary_wraps)] // Needed by maturin
 pub fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
     Ok((a + b).to_string())
 }
 
 #[pyfunction]
+#[allow(clippy::unnecessary_wraps)] // Needed by maturin
 pub fn print_something() -> PyResult<()> {
     println!("This is from Rust");
     Ok(())
@@ -38,10 +40,10 @@ mod mod_test_sum_as_string {
     #[test]
     fn test_sum_as_string() -> Result<(), String> {
         let _expected_output = String::from("5");
-        match sum_as_string(2, 3) {
-            Ok(_expected_output) => Ok(()),
-            _ => Err(String::from("Two plus three does not equal five")),
-        }
+        sum_as_string(2, 3).map_or_else(
+            |_| Err(String::from("Two plus three does not equal five")),
+            |_expected_output| Ok(()),
+        )
     }
 }
 

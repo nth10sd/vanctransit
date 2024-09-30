@@ -5,6 +5,8 @@ use std::path::PathBuf;
 
 /// Truncate file to the desired size
 #[pyfunction]
+#[allow(clippy::module_name_repetitions)]
+#[allow(clippy::needless_pass_by_value)]
 pub fn truncate_file_lines(in_file: PathBuf, lines_wanted: u64) -> PyResult<()> {
     let tmp_in_file = in_file.to_string_lossy();
     let tmp_filename = format!("{tmp_in_file}~"); // Create new filename with the tilde appended
