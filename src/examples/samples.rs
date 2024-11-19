@@ -26,7 +26,7 @@ pub fn print_cli_args(py: Python) -> PyResult<()> {
     // `["/home/ferris/.venv/bin/print_cli_args", "a", "b", "c"])`
     println!(
         "{:?}",
-        py.import_bound("sys")?
+        py.import("sys")?
             .getattr("argv")?
             .extract::<Vec<String>>()?
     );
