@@ -23,7 +23,7 @@ dependencies = [
     "osmnx ~= 1.8.0",      # Enable mypy checking in >=2.x
     "pyqt6 ~= 6.6.1",
     "uv >= 0.5.3",         # CI looks out for the comparison: >=
-    "wheel >= 0.42.0",
+    "wheel >= 0.45.0",
 ]
 
 [project.optional-dependencies]
