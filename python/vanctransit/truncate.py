@@ -14,7 +14,9 @@ if TYPE_CHECKING:
     from collections.abc import Iterable
 
 
-def py_truncate_file_lines(filename: Path | str, lines_wanted: int) -> None:
+def py_truncate_file_lines(  # vulture: ignore
+    filename: Path | str, lines_wanted: int
+) -> None:
     """Truncate files to desired number of lines, similar algorithm to naive Rust one.
 
     :param filename: Filename of file to truncate
@@ -39,7 +41,9 @@ def py_truncate_file_lines(filename: Path | str, lines_wanted: int) -> None:
     temp_file.unlink()
 
 
-def fast_py_truncate_file_lines(filename: Path | str, lines_wanted: int) -> None:
+def fast_py_truncate_file_lines(  # vulture: ignore
+    filename: Path | str, lines_wanted: int
+) -> None:
     """Truncate files to desired number of lines, optimized algorithm in Python.
 
     Adapted from https://stackoverflow.com/a/27672002
