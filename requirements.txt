@@ -24,7 +24,7 @@ colorama==0.4.6 ; sys_platform == 'win32'
     #   sphinx
 contourpy==1.3.1
     # via matplotlib
-coverage[toml]==7.6.7
+coverage[toml]==7.6.9
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-cov
@@ -60,7 +60,7 @@ markupsafe==3.0.2
     # via jinja2
 matplotlib==3.8.4
     # via vanctransit (pyproject.toml)
-maturin==1.7.4
+maturin==1.7.8
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
@@ -107,7 +107,7 @@ pluggy==1.5.0
     # via pytest
 pygments==2.18.0
     # via sphinx
-pylint==3.3.1
+pylint==3.3.2
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-pylint
@@ -123,9 +123,9 @@ pyqt6-qt6==6.7.3
     # via pyqt6
 pyqt6-sip==13.8.0
     # via pyqt6
-pyright==1.1.389 ; platform_system == 'Linux'
+pyright==1.1.390 ; platform_system == 'Linux'
     # via vanctransit (pyproject.toml)
-pytest==8.3.3
+pytest==8.3.4
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-cov
@@ -136,6 +136,7 @@ pytest==8.3.3
     #   pytest-pylint
     #   pytest-randomly
     #   pytest-ruff
+    #   pytest-vulture
     #   pytest-xdist
 pytest-cov==6.0.0
     # via vanctransit (pyproject.toml)
@@ -153,6 +154,8 @@ pytest-randomly==3.16.0
     # via vanctransit (pyproject.toml)
 pytest-ruff==0.4.1
     # via vanctransit (pyproject.toml)
+pytest-vulture==2.2.2
+    # via vanctransit (pyproject.toml)
 pytest-xdist==3.6.1
     # via vanctransit (pyproject.toml)
 python-dateutil==2.9.0.post0
@@ -167,7 +170,7 @@ requests==2.32.3
     # via
     #   osmnx
     #   sphinx
-ruff==0.7.4
+ruff==0.8.2
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
@@ -217,9 +220,11 @@ tzdata==2024.2
     # via pandas
 urllib3==2.2.3
     # via requests
-uv==0.5.3
+uv==0.5.7
     # via vanctransit (pyproject.toml)
-vulture==2.13
-    # via vanctransit (pyproject.toml)
+vulture==2.14
+    # via
+    #   vanctransit (pyproject.toml)
+    #   pytest-vulture
 wheel==0.45.0
     # via vanctransit (pyproject.toml)
