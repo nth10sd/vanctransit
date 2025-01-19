@@ -13,7 +13,7 @@ file_diff = "1.0.0"
 testdir = "0.9.1"
 
 [dependencies.pyo3]
-version = "0.23.3"
+version = "0.23.4"
 features = ["abi3-py310"] # Python 3.10
 
 [lints.clippy]

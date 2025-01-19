@@ -60,11 +60,11 @@ markupsafe==3.0.2
     # via jinja2
 matplotlib==3.8.4
     # via vanctransit (pyproject.toml)
-maturin==1.8.0
+maturin==1.8.1
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
-mypy==1.13.0
+mypy==1.14.1
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-mypy
@@ -73,9 +73,9 @@ mypy-extensions==1.0.0
     # via mypy
 networkx==3.4.2
     # via osmnx
-nodeenv==1.9.1 ; platform_system == 'Linux'
+nodeenv==1.9.1 ; sys_platform == 'linux'
     # via pyright
-numpy==2.2.1
+numpy==2.2.2
     # via
     #   contourpy
     #   geopandas
@@ -99,13 +99,13 @@ pandas==2.2.3
     #   osmnx
 pbr==6.1.0
     # via bashate
-pillow==11.0.0
+pillow==11.1.0
     # via matplotlib
 platformdirs==4.3.6
     # via pylint
 pluggy==1.5.0
     # via pytest
-pygments==2.18.0
+pygments==2.19.1
     # via sphinx
 pylint==3.3.3
     # via
@@ -113,7 +113,7 @@ pylint==3.3.3
     #   pytest-pylint
 pyogrio==0.10.0
     # via geopandas
-pyparsing==3.2.0
+pyparsing==3.2.1
     # via matplotlib
 pyproj==3.7.0
     # via geopandas
@@ -123,7 +123,7 @@ pyqt6-qt6==6.8.1
     # via pyqt6
 pyqt6-sip==13.9.1
     # via pyqt6
-pyright==1.1.391 ; platform_system == 'Linux'
+pyright==1.1.392 ; sys_platform == 'linux'
     # via vanctransit (pyproject.toml)
 pytest==8.3.4
     # via
@@ -170,11 +170,11 @@ requests==2.32.3
     # via
     #   osmnx
     #   sphinx
-ruff==0.8.4
+ruff==0.8.6
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
-setuptools==75.6.0
+setuptools==75.8.0
     # via pytest-dependency
 shapely==2.0.6
     # via
@@ -220,7 +220,7 @@ tzdata==2024.2
     # via pandas
 urllib3==2.3.0
     # via requests
-uv==0.5.12
+uv==0.5.21
     # via vanctransit (pyproject.toml)
 vulture==2.14
     # via
