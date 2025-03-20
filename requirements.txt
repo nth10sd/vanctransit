@@ -58,7 +58,7 @@ kiwisolver==1.4.8
     # via matplotlib
 markupsafe==3.0.2
     # via jinja2
-matplotlib==3.8.4
+matplotlib==3.10.1
     # via vanctransit (pyproject.toml)
 maturin==1.8.3
     # via vanctransit (pyproject.toml)
@@ -84,7 +84,7 @@ numpy==2.2.4
     #   pandas
     #   pyogrio
     #   shapely
-osmnx==1.8.1
+osmnx==2.0.1
     # via vanctransit (pyproject.toml)
 packaging==24.2
     # via
@@ -117,7 +117,7 @@ pyparsing==3.2.1
     # via matplotlib
 pyproj==3.7.1
     # via geopandas
-pyqt6==6.6.1
+pyqt6==6.8.1
     # via vanctransit (pyproject.toml)
 pyqt6-qt6==6.8.2
     # via pyqt6
