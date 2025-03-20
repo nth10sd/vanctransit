@@ -17,10 +17,10 @@ classifiers = [
     "Topic :: Utilities",
 ]
 dependencies = [
-    "matplotlib ~= 3.8.2",
+    "matplotlib ~= 3.10.1",
     "maturin ~= 1.8.3",
-    "osmnx ~= 1.8.0",      # Enable mypy checking in >=2.x
-    "pyqt6 ~= 6.6.1",
+    "osmnx ~= 2.0.1",
+    "pyqt6 ~= 6.8.1",
     "uv >= 0.6.8",         # CI looks out for the comparison: >=
     "wheel >= 0.45.1",
 ]
