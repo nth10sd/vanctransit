@@ -21,7 +21,7 @@ dependencies = [
     "maturin ~= 1.8.3",
     "osmnx ~= 2.0.1",
     "pyqt6 ~= 6.8.1",
-    "uv >= 0.6.9",         # CI looks out for the comparison: >=
+    "uv >= 0.6.14",        # CI looks out for the comparison: >=
     "wheel >= 0.45.1",
 ]
 dynamic = ["version", "readme"]
@@ -29,16 +29,16 @@ dynamic = ["version", "readme"]
 [project.optional-dependencies]
 test = [
     "bashate ~= 2.1.1",
-    'coverage ~= 7.7.1; python_version >= "3.11"',
-    'coverage[toml] ~= 7.7.1; python_version <= "3.10"',
+    'coverage ~= 7.8.0; python_version >= "3.11"',
+    'coverage[toml] ~= 7.8.0; python_version <= "3.10"',
     "mypy ~= 1.15.0",
     "pylint ~= 3.3.6",
-    'pyright==1.1.397; platform_system == "Linux"',
+    'pyright==1.1.399; platform_system == "Linux"',
     "pytest ~= 8.3.5",
-    "pytest-cov ~= 6.0.0",
+    "pytest-cov ~= 6.1.1",
     "pytest-dependency ~= 0.6.0",
     "pytest-instafail ~= 0.5.0",
-    "pytest-mypy ~= 0.10.3",
+    "pytest-mypy ~= 1.0.1",
     "pytest-order ~= 1.3.0",
     "pytest-pylint ~= 0.21.0",
     "pytest-randomly ~= 3.16.0",
@@ -46,7 +46,7 @@ test = [
     "pytest-vulture ~= 2.2.2",
     "pytest-xdist ~= 3.6.1",
     "refurb ~= 2.0.0",
-    "ruff ~= 0.11.2",
+    "ruff ~= 0.11.6",
     "sphinx ~= 8.1.3",
     "vulture ~= 2.14",
 ]
