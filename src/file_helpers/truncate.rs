@@ -1,5 +1,5 @@
-use pyo3::prelude::{pyfunction, PyResult};
-use std::fs::{rename, File};
+use pyo3::prelude::{PyResult, pyfunction};
+use std::fs::{File, rename};
 use std::io::{BufRead, BufReader, LineWriter, Write};
 use std::path::PathBuf;
 

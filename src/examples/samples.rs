@@ -1,4 +1,4 @@
-use pyo3::prelude::{pyfunction, PyAnyMethods, PyResult, Python};
+use pyo3::prelude::{PyAnyMethods, PyResult, Python, pyfunction};
 use std::env;
 
 /// Formats the sum of two numbers as string.
