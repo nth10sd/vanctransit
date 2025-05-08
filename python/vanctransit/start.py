@@ -3,12 +3,17 @@
 from __future__ import annotations
 
 from logging import INFO as INFO_LOG_LEVEL
+from typing import cast
 
 import osmnx as ox
 
 # pylint: disable=no-name-in-module
-from vanctransit._vanctransit import print_something
-from vanctransit._vanctransit import sum_as_string
+from vanctransit._vanctransit import (
+    print_something,  # pyright: ignore[reportUnknownVariableType]
+)
+from vanctransit._vanctransit import (
+    sum_as_string,  # pyright: ignore[reportUnknownVariableType]
+)
 from vanctransit.util.logging import get_logger
 from vanctransit.util.utils import add_one
 
@@ -23,8 +28,11 @@ def main() -> None:
 
     RUN_LOG.info("Rust functions below:")
     print_something()
-    RUN_LOG.info(sum_as_string(2, 3))
+    result: str = cast("str", sum_as_string(2, 3))
+    RUN_LOG.info(result)
 
-    ox.plot_graph(
-        ox.graph_from_place("Vancouver, British Columbia", network_type="walk")
+    _ = ox.plot_graph(  # pyright: ignore[reportUnknownMemberType]
+        ox.graph_from_place(  # pyright: ignore[reportUnknownMemberType]
+            "Vancouver, British Columbia", network_type="walk"
+        )
     )

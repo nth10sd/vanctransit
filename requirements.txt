@@ -6,6 +6,8 @@ astroid==3.3.9
     # via pylint
 babel==2.17.0
     # via sphinx
+basedpyright==1.29.1
+    # via vanctransit (pyproject.toml)
 certifi==2025.4.26
     # via
     #   pyogrio
@@ -69,8 +71,8 @@ mypy-extensions==1.1.0
     # via mypy
 networkx==3.4.2
     # via osmnx
-nodeenv==1.9.1 ; sys_platform == 'linux'
-    # via pyright
+nodejs-wheel-binaries==22.15.0
+    # via basedpyright
 numpy==2.2.5
     # via
     #   contourpy
@@ -117,8 +119,6 @@ pyqt6-qt6==6.8.2
     # via pyqt6
 pyqt6-sip==13.10.0
     # via pyqt6
-pyright==1.1.400 ; sys_platform == 'linux'
-    # via vanctransit (pyproject.toml)
 pytest==8.3.5
     # via
     #   vanctransit (pyproject.toml)
@@ -211,7 +211,6 @@ typing-extensions==4.13.2
     # via
     #   astroid
     #   mypy
-    #   pyright
 tzdata==2025.2
     # via pandas
 urllib3==2.4.0
