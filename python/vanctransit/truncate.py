@@ -56,7 +56,7 @@ def fast_py_truncate_file_lines(  # vulture: ignore
         file_iterator = iter(f.readline, "")
         blackhole(
             islice(
-                file_iterator,  # type: ignore[reportArgumentType,unused-ignore]
+                file_iterator,
                 lines_wanted,
             )
         )
