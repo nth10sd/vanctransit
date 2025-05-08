@@ -64,6 +64,7 @@ module-name = "vanctransit._vanctransit"
 
 [tool.basedpyright]
 exclude = ["**/node_modules", "**/__pycache__", "**/.*", "build/", "target/"]
+typeCheckingMode = "recommended"
 
 [tool.coverage.report]
 # Taken from: https://coverage.readthedocs.io/en/coverage-5.5/config.html#syntax
