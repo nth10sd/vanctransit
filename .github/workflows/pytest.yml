@@ -84,7 +84,7 @@ jobs:
       - name: Run basedpyright
         run: python -u -m basedpyright
       - name: Run with refurb to find code that can be written in a more modern way
-        run: uvx refurb .
+        run: uvx --with-requirements=requirements.txt refurb .
 
       - name: Install OS prerequisites
         if: startsWith(runner.os, 'Linux')
