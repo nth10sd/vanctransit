@@ -56,7 +56,7 @@ kiwisolver==1.4.8
     # via matplotlib
 markupsafe==3.0.2
     # via jinja2
-matplotlib==3.10.1
+matplotlib==3.10.3
     # via vanctransit (pyproject.toml)
 maturin==1.8.3
     # via vanctransit (pyproject.toml)
@@ -66,7 +66,6 @@ mypy==1.15.0
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-mypy
-    #   refurb
 mypy-extensions==1.1.0
     # via mypy
 networkx==3.4.2
@@ -107,7 +106,7 @@ pylint==3.3.7
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-pylint
-pyogrio==0.10.0
+pyogrio==0.11.0
     # via geopandas
 pyparsing==3.2.3
     # via matplotlib
@@ -158,8 +157,6 @@ python-dateutil==2.9.0.post0
     #   pandas
 pytz==2025.2
     # via pandas
-refurb==2.0.0
-    # via vanctransit (pyproject.toml)
 requests==2.32.3
     # via
     #   osmnx
@@ -200,7 +197,6 @@ tomli==2.2.1 ; python_full_version <= '3.11'
     #   pylint
     #   pytest
     #   pytest-pylint
-    #   refurb
     #   sphinx
     #   vulture
 tomlkit==0.13.2
