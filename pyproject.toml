@@ -56,7 +56,7 @@ print_something = "vanctransit._vanctransit:print_something"
 
 [tool.maturin]
 features = ["pyo3/extension-module"]
-python-source = "python"
+python-source = "python/"
 module-name = "vanctransit._vanctransit"
 
 ##### Other tools #####
@@ -237,7 +237,7 @@ exclude = [
     "venv",
 ]
 include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
-src = ["python"]
+src = ["python/"]
 target-version = "py310"
 unsafe-fixes = true
 
