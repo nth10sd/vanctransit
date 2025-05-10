@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 from typing import Any
 
 # pylint: disable=no-name-in-module
-# pyrefly: ignore  # import-error
+# pyrefly: ignore  # import-error  # noqa: ERA001,RUF100
 from vanctransit._vanctransit import (
     truncate_file_lines,  # pyright: ignore[reportUnknownVariableType]
 )

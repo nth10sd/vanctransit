@@ -8,11 +8,12 @@ from typing import cast
 import osmnx as ox
 
 # pylint: disable=no-name-in-module
-# pyrefly: ignore  # import-error
+# pyrefly: ignore  # import-error  # noqa: ERA001,RUF100
 from vanctransit._vanctransit import (
     print_something,  # pyright: ignore[reportUnknownVariableType]
 )
-# pyrefly: ignore  # import-error
+
+# pyrefly: ignore  # import-error  # noqa: ERA001,RUF100
 from vanctransit._vanctransit import (
     sum_as_string,  # pyright: ignore[reportUnknownVariableType]
 )
