@@ -65,6 +65,7 @@ module-name = "vanctransit._vanctransit"
 [tool.basedpyright]
 exclude = ["**/node_modules", "**/__pycache__", "**/.*", "build/", "target/"]
 extraPaths = ["python/"]
+reportImplicitStringConcatenation = false  # Other linters cover this in better ways
 typeCheckingMode = "recommended"
 
 [tool.coverage.report]
