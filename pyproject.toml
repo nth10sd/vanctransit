@@ -18,10 +18,10 @@ classifiers = [
     "Topic :: Utilities",
 ]
 dependencies = [
-    "matplotlib ~= 3.10.1",
+    "matplotlib ~= 3.10.3",
     "maturin ~= 1.8.6",
-    "osmnx ~= 2.0.1",
-    "pyqt6 ~= 6.8.1",
+    "osmnx ~= 2.0.3",
+    "pyqt6 ~= 6.9.0",
     "uv >= 0.7.5",        # CI looks out for the comparison: >=
     "wheel >= 0.45.1",
 ]
@@ -34,7 +34,7 @@ test = [
     'coverage[toml] ~= 7.8.0; python_version <= "3.10"',
     "mypy ~= 1.15.0",
     "pylint ~= 3.3.7",
-    "pyrefly ~= 0.15.2",
+    "pyrefly ~= 0.16.0",
     "pytest ~= 8.3.5",
     "pytest-cov ~= 6.1.1",
     "pytest-dependency ~= 0.6.0",

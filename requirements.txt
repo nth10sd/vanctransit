@@ -112,13 +112,13 @@ pyparsing==3.2.3
     # via matplotlib
 pyproj==3.7.1
     # via geopandas
-pyqt6==6.8.1
+pyqt6==6.9.0
     # via vanctransit (pyproject.toml)
-pyqt6-qt6==6.8.2
+pyqt6-qt6==6.9.0
     # via pyqt6
 pyqt6-sip==13.10.0
     # via pyqt6
-pyrefly==0.15.2
+pyrefly==0.16.0
     # via vanctransit (pyproject.toml)
 pytest==8.3.5
     # via
@@ -169,7 +169,7 @@ ruff==0.11.10
     #   pytest-ruff
 setuptools==80.7.1
     # via pytest-dependency
-shapely==2.1.0
+shapely==2.1.1
     # via
     #   geopandas
     #   osmnx
