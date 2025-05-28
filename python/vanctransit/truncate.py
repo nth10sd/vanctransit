@@ -1,9 +1,10 @@
 """Sample code involving truncation."""
 
 from collections import deque
+from collections.abc import Callable
+from collections.abc import Iterable
 from itertools import islice
 from pathlib import Path
-from typing import TYPE_CHECKING
 from typing import Any
 
 # pylint: disable=no-name-in-module
@@ -11,10 +12,6 @@ from typing import Any
 from vanctransit._vanctransit import (
     truncate_file_lines,  # pyright: ignore[reportUnknownVariableType]
 )
-
-if TYPE_CHECKING:
-    from collections.abc import Callable
-    from collections.abc import Iterable
 
 
 def py_truncate_file_lines(  # vulture: ignore
