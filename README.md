@@ -2,7 +2,7 @@
 
 # README
 
-This demo was tested with Python 3.10 - 3.12.
+This demo was tested with Python 3.11 - 3.12.
 
 ## Prerequisites
 
@@ -24,11 +24,11 @@ info: The currently active `rustc` version is `rustc 1.74.0 (79e9716c9 2023-11-1
 
 Ensure you do not have any existing `venv` at `~/venv-vanctransit`.
 
-Create a new Python 3.10 (install it beforehand) virtual environment using `venv` and switch to it.
+Create a new Python 3.11 (install it beforehand) virtual environment using `venv` and switch to it.
 
 Linux or macOS:
 ```
-python3.10 -u -m venv --upgrade-deps ~/venv-vanctransit ; . ~/venv-vanctransit/bin/activate ;
+python3.11 -u -m venv --upgrade-deps ~/venv-vanctransit ; . ~/venv-vanctransit/bin/activate ;
 ```
 
 Windows:

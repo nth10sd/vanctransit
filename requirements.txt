@@ -34,8 +34,6 @@ dill==0.4.0
     # via pylint
 docutils==0.21.2
     # via sphinx
-exceptiongroup==1.3.0 ; python_full_version < '3.11'
-    # via pytest
 execnet==2.1.1
     # via pytest-xdist
 filelock==3.18.0
@@ -70,7 +68,7 @@ mypy==1.15.0
     #   pytest-mypy
 mypy-extensions==1.1.0
     # via mypy
-networkx==3.4.2
+networkx==3.5
     # via osmnx
 nodejs-wheel-binaries==22.16.0
     # via basedpyright
@@ -165,7 +163,9 @@ requests==2.32.3
     # via
     #   osmnx
     #   sphinx
-ruff==0.11.11
+roman-numerals-py==3.1.0
+    # via sphinx
+ruff==0.11.12
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
@@ -179,7 +179,7 @@ six==1.17.0
     # via python-dateutil
 snowballstemmer==3.0.1
     # via sphinx
-sphinx==8.1.3
+sphinx==8.2.3
     # via vanctransit (pyproject.toml)
 sphinxcontrib-applehelp==2.0.0
     # via sphinx
@@ -193,30 +193,19 @@ sphinxcontrib-qthelp==2.0.0
     # via sphinx
 sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
-tomli==2.2.1 ; python_full_version <= '3.11'
-    # via
-    #   coverage
-    #   maturin
-    #   mypy
-    #   pylint
-    #   pytest
-    #   pytest-pylint
-    #   sphinx
-    #   vulture
 tomlkit==0.13.2
     # via pylint
 ty==0.0.1a7
     # via vanctransit (pyproject.toml)
+types-setuptools==80.9.0.20250529
+    # via vanctransit (pyproject.toml)
 typing-extensions==4.13.2
-    # via
-    #   astroid
-    #   exceptiongroup
-    #   mypy
+    # via mypy
 tzdata==2025.2
     # via pandas
 urllib3==2.4.0
     # via requests
-uv==0.7.8
+uv==0.7.9
     # via vanctransit (pyproject.toml)
 vulture==2.14
     # via
