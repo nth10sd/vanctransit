@@ -1,11 +1,14 @@
 """Sample code involving truncation."""
 
 from collections import deque
-from collections.abc import Callable
-from collections.abc import Iterable
 from itertools import islice
 from pathlib import Path
+from typing import TYPE_CHECKING
 from typing import Any
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
+    from collections.abc import Iterable
 
 # pylint: disable=no-name-in-module
 # pyrefly: ignore  # import-error  # noqa: ERA001,RUF100
