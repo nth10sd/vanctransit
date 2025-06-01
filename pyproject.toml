@@ -25,6 +25,7 @@ dependencies = [
     "maturin ~= 1.8.6",
     "osmnx ~= 2.0.3",
     "pyqt6 ~= 6.9.0",
+    "setuptools==80.9.0",
     "types-setuptools==80.9.0.20250529",        # Bump types-* only with mypy
     "uv >= 0.7.9",        # CI looks out for the comparison: >=
     "wheel==0.45.1",
