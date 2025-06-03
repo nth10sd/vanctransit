@@ -38,7 +38,7 @@ test = [
     "coverage ~= 7.8.2",
     "mypy ~= 1.15.0",
     "pylint ~= 3.3.7",
-    "pyrefly ~= 0.17.1",
+    "pyrefly ~= 0.18.0",
     "pytest ~= 8.3.5",
     "pytest-cov ~= 6.1.1",
     "pytest-dependency ~= 0.6.0",
@@ -52,7 +52,7 @@ test = [
     "pytest-xdist ~= 3.7.0",
     "ruff ~= 0.11.12",
     "sphinx ~= 8.2.3",
-    "ty ~= 0.0.1a7",
+    "ty ~= 0.0.1a8",
     "vulture ~= 2.14",
 ]
 
@@ -280,7 +280,7 @@ force-sort-within-sections = true
 known-local-folder = ["vanctransit"]
 
 [tool.ty.rules]
-# As of 20250527, ty version 0.0.1a7
+# As of 20250602, ty version 0.0.1a8
 # https://github.com/astral-sh/ty/blob/main/docs/reference/rules.md
 division-by-zero = "error"
 invalid-ignore-comment = "error"
@@ -292,7 +292,7 @@ redundant-cast = "error"
 undefined-reveal = "error"
 unknown-rule = "error"
 unsupported-base = "error"
-unused-ignore-comment = "ignore"  # Disabled as of immature 20250527 ty version 0.0.1a7
+unused-ignore-comment = "ignore"  # Disabled as of immature 20250602 ty version 0.0.1a8
 
 [tool.vulture]
 check-entry-points = 0  # maturin repos only
