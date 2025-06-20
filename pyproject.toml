@@ -293,7 +293,7 @@ redundant-cast = "error"
 undefined-reveal = "error"
 unknown-rule = "error"
 unsupported-base = "error"
-unused-ignore-comment = "ignore"  # Disabled as of immature 20250602 ty version 0.0.1a8
+unused-ignore-comment = "error"
 
 [tool.vulture]
 check-entry-points = 0  # maturin repos only

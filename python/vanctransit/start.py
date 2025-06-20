@@ -9,12 +9,12 @@ import osmnx as ox
 
 # pylint: disable=no-name-in-module
 # pyrefly: ignore  # import-error  # noqa: ERA001,RUF100
-from vanctransit._vanctransit import (
+from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]
     print_something,  # pyright: ignore[reportUnknownVariableType]
 )
 
 # pyrefly: ignore  # import-error  # noqa: ERA001,RUF100
-from vanctransit._vanctransit import (
+from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]
     sum_as_string,  # pyright: ignore[reportUnknownVariableType]
 )
 from vanctransit.util.logging import get_logger
