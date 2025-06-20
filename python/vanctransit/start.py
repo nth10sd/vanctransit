@@ -5,7 +5,7 @@ from __future__ import annotations
 from logging import INFO as INFO_LOG_LEVEL
 from typing import cast
 
-import osmnx as ox
+import osmnx as ox  # ty: ignore[unresolved-import,unused-ignore-comment]
 
 # pylint: disable=no-name-in-module
 # pyrefly: ignore  # import-error  # noqa: ERA001,RUF100
@@ -17,8 +17,12 @@ from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]
 from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]
     sum_as_string,  # pyright: ignore[reportUnknownVariableType]
 )
-from vanctransit.util.logging import get_logger
-from vanctransit.util.utils import add_one
+from vanctransit.util.logging import (  # ty: ignore[unresolved-import,unused-ignore-comment]
+    get_logger,
+)
+from vanctransit.util.utils import (  # ty: ignore[unresolved-import,unused-ignore-comment]
+    add_one,
+)
 
 RUN_LOG = get_logger(__name__)
 RUN_LOG.setLevel(INFO_LOG_LEVEL)
