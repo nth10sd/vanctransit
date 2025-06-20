@@ -19,7 +19,7 @@ from __future__ import annotations
 from pathlib import Path
 import sys
 
-import vanctransit  # ty: ignore[unresolved-import,unused-ignore-comment]
+import vanctransit  # ty: ignore[unresolved-import]
 
 sys.path.insert(0, str(Path(__file__).parents[2]))
 

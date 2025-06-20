@@ -6,15 +6,15 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 from typing import Any
 
-if TYPE_CHECKING:
-    from collections.abc import Callable
-    from collections.abc import Iterable
-
 # pylint: disable=no-name-in-module
 # pyrefly: ignore  # import-error  # noqa: ERA001,RUF100
 from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]
     truncate_file_lines,  # pyright: ignore[reportUnknownVariableType]
 )
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
+    from collections.abc import Iterable
 
 
 def py_truncate_file_lines(  # vulture: ignore
@@ -59,7 +59,7 @@ def fast_py_truncate_file_lines(  # vulture: ignore
         blackhole = deque((), 0).extend
         file_iterator = iter(f.readline, "")
         blackhole(
-            islice(  # ty: ignore[unused-ignore-comment]  # type: ignore[arg-type]
+            islice(  # type: ignore[arg-type]
                 file_iterator,
                 lines_wanted,
             )

@@ -293,7 +293,7 @@ redundant-cast = "error"
 undefined-reveal = "error"
 unknown-rule = "error"
 unsupported-base = "error"
-unused-ignore-comment = "error"
+unused-ignore-comment = "ignore"  # As of 20250620, ty version 0.0.1a11 is immature
 
 [tool.vulture]
 check-entry-points = 0  # maturin repos only
