@@ -205,8 +205,8 @@ score = "no"
 py-version = "3.11"
 
 [tool.pyrefly]
-python_version = "3.11"
-search_path = [
+python-version = "3.11"
+search-path = [
     "python/",
 ]
 
