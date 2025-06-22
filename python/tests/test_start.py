@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from vanctransit import start  # ty: ignore[unresolved-import]
+from vanctransit import start
 
 
 def test_main() -> None:

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from logging import INFO as INFO_LOG_LEVEL
 
-from vanctransit.util.logging import get_logger  # ty: ignore[unresolved-import]
+from vanctransit.util.logging import get_logger
 
 UTIL_RUN_LOG = get_logger(__name__, fmt="%(message)s")
 UTIL_RUN_LOG.setLevel(INFO_LOG_LEVEL)

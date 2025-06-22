@@ -8,7 +8,7 @@ from typing import Any
 
 # pylint: disable=no-name-in-module
 # pyrefly: ignore  # import-error  # noqa: ERA001,RUF100
-from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]
+from vanctransit._vanctransit import (
     truncate_file_lines,  # pyright: ignore[reportUnknownVariableType]
 )
 
@@ -59,7 +59,7 @@ def fast_py_truncate_file_lines(  # vulture: ignore
         blackhole = deque((), 0).extend
         file_iterator = iter(f.readline, "")
         blackhole(
-            islice(  # type: ignore[arg-type]
+            islice(  # type: ignore[arg-type]  # ty: ignore[unused-ignore-comment]
                 file_iterator,
                 lines_wanted,
             )

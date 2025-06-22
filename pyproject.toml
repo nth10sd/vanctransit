@@ -292,8 +292,9 @@ possibly-unresolved-reference = "error"
 redundant-cast = "error"
 undefined-reveal = "error"
 unknown-rule = "error"
+unresolved-import = "ignore"  # As of 20250620, ty version 0.0.1a11 is immature
 unsupported-base = "error"
-unused-ignore-comment = "ignore"  # As of 20250620, ty version 0.0.1a11 is immature
+unused-ignore-comment = "error"
 
 [tool.vulture]
 check-entry-points = 0  # maturin repos only
