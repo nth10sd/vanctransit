@@ -79,10 +79,9 @@ jobs:
 
       - name: Run with ruff
         run: python -u -m ruff check
-      - name: Run with ty
-        run: python -u -m ty check --error-on-warning
       - name: Run with pyrefly and print out differences if any (Can be removed when pyrefly matures)
-        run: rg -t py --files | xargs pyrefly check --remove-unused-ignores ; git diff ; git checkout -- .
+        shell: bash
+        run: find . -type f -name "*.py" | pyrefly check --remove-unused-ignores ; git diff ; git checkout -- .
       - name: Run basedpyright
         run: python -u -m basedpyright
       - name: Run with refurb to find code that can be written in a more modern way
@@ -128,7 +127,7 @@ jobs:
 
       - name: Run tools using pytest
         run: |
-          python -u -m pytest --cov --mypy --pylint --ruff --ruff-format --vulture
+          python -u -m pytest --cov --mypy --pylint --ruff --ruff-format --ty --vulture
 
       # CodeQL analysis section START
       # Linux-only, enable on GitHub for public repos and private repos on Enterprise plan with Advanced Security
