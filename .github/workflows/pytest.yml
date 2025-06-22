@@ -82,7 +82,7 @@ jobs:
       - name: Run with ty
         run: python -u -m ty check --error-on-warning
       - name: Run with pyrefly and print out differences if any (Can be removed when pyrefly matures)
-        run: pyrefly check --remove-unused-ignores ; git diff ; git checkout -- .
+        run: rg -t py --files | xargs pyrefly check --remove-unused-ignores ; git diff ; git checkout -- .
       - name: Run basedpyright
         run: python -u -m basedpyright
       - name: Run with refurb to find code that can be written in a more modern way
