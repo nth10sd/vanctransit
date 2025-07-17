@@ -5,8 +5,6 @@ from __future__ import annotations
 from logging import INFO as INFO_LOG_LEVEL
 from typing import cast
 
-import osmnx as ox
-
 # pylint: disable=no-name-in-module
 # import-error  # noqa: ERA001,RUF100
 from vanctransit._vanctransit import (  # pyrefly: ignore[import-error]
@@ -34,8 +32,8 @@ def main() -> None:
     result: str = cast("str", sum_as_string(2, 3))
     RUN_LOG.info(result)
 
-    _ = ox.plot_graph(  # pyright: ignore[reportUnknownMemberType]
-        ox.graph_from_place(  # pyright: ignore[reportUnknownMemberType]
-            "Vancouver, British Columbia", network_type="walk"
-        )
-    )
+    # \_ = ox.plot_graph(  # p yright: ignore[reportUnknownMemberType]
+    # \    ox.graph_from_place(  # p yright: ignore[reportUnknownMemberType]
+    # \        "Vancouver, British Columbia", network_type="walk"
+    # \    )
+    # \)
