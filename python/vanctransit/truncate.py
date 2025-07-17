@@ -55,7 +55,8 @@ def fast_py_truncate_file_lines(  # vulture: ignore
     :param lines_wanted: Desired number of lines to retain
     """
     with Path(filename).open("r+", encoding="utf-8", errors="surrogateescape") as f:
-        blackhole: Callable[[Iterable[Any]], None]  # pyright: ignore[reportExplicitAny]
+        # pylint: disable-next=line-too-long
+        blackhole: Callable[[Iterable[Any]], None]  # type: ignore[explicit-any]  # ty: ignore[unused-ignore-comment]  # pyright: ignore[reportExplicitAny]
         blackhole = deque((), 0).extend
         file_iterator = iter(f.readline, "")
         blackhole(
