@@ -106,8 +106,11 @@ source = ["python/vanctransit/", "python/tests/"]
 
 [tool.mypy]
 disallow_any_unimported = true
+disallow_any_explicit = true
+enable_error_code = "deprecated,exhaustive-match,explicit-override,ignore-without-code,mutable-override,possibly-undefined,redundant-expr,redundant-self,truthy-bool,truthy-iterable,unimported-reveal,unused-awaitable,unused-ignore"
 exclude = ["build/", "target/"]
 namespace_packages = true
+pretty = true
 python_version = "3.11"
 show_error_codes = true
 strict = true
