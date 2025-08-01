@@ -54,13 +54,13 @@ kiwisolver==1.4.8
     # via matplotlib
 markupsafe==3.0.2
     # via jinja2
-matplotlib==3.10.3
+matplotlib==3.10.5
     # via vanctransit (pyproject.toml)
 maturin==1.9.2
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
-mypy==1.17.0
+mypy==1.17.1
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-mypy
@@ -68,7 +68,7 @@ mypy-extensions==1.1.0
     # via mypy
 networkx==3.5
     # via osmnx
-nodejs-wheel-binaries==22.17.1
+nodejs-wheel-binaries==22.18.0
     # via basedpyright
 numpy==2.3.2
     # via
@@ -122,7 +122,7 @@ pyqt6-qt6==6.9.1
     # via pyqt6
 pyqt6-sip==13.10.2
     # via pyqt6
-pyrefly==0.26.0
+pyrefly==0.26.1
     # via vanctransit (pyproject.toml)
 pytest==8.4.1
     # via
