@@ -27,7 +27,7 @@ dependencies = [
     "pyqt6 ~= 6.9.0",
     "setuptools==80.9.0",
     "types-setuptools==80.9.0.20250529",        # Bump types-* only with mypy
-    "uv >= 0.8.11",        # CI looks out for the comparison: >=
+    "uv >= 0.8.12",        # CI looks out for the comparison: >=
     "wheel==0.45.1",
 ]
 dynamic = ["version", "readme"]
@@ -53,7 +53,7 @@ test = [
     "pytest-xdist ~= 3.8.0",
     "ruff ~= 0.12.9",
     "sphinx ~= 8.2.3",
-    "ty ~= 0.0.1a18",
+    "ty ~= 0.0.1a19",
     "vulture ~= 2.14",
 ]
 
