@@ -122,9 +122,9 @@ pyqt6-qt6==6.9.2
     # via pyqt6
 pyqt6-sip==13.10.2
     # via pyqt6
-pyrefly==0.31.0
+pyrefly==0.32.0
     # via vanctransit (pyproject.toml)
-pytest==8.4.1
+pytest==8.4.2
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-cov
@@ -138,7 +138,7 @@ pytest==8.4.1
     #   pytest-ty
     #   pytest-vulture
     #   pytest-xdist
-pytest-cov==6.2.1
+pytest-cov==6.3.0
     # via vanctransit (pyproject.toml)
 pytest-dependency==0.6.0
     # via vanctransit (pyproject.toml)
@@ -172,7 +172,7 @@ requests==2.32.5
     #   sphinx
 roman-numerals-py==3.1.0
     # via sphinx
-ruff==0.12.11
+ruff==0.12.12
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
