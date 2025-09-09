@@ -27,6 +27,7 @@ dependencies = [
     "pyqt6 ~= 6.9.0",
     "setuptools==80.9.0",
     "types-setuptools==80.9.0.20250529",        # Bump types-* only with mypy
+    "typing-extensions ~= 4.15.0",
     "uv >= 0.8.15",        # CI looks out for the comparison: >=
     "wheel==0.45.1",
 ]

@@ -213,7 +213,9 @@ ty==0.0.1a20
 types-setuptools==80.9.0.20250529
     # via vanctransit (pyproject.toml)
 typing-extensions==4.15.0
-    # via mypy
+    # via
+    #   vanctransit (pyproject.toml)
+    #   mypy
 tzdata==2025.2
     # via pandas
 urllib3==2.5.0
