@@ -6,7 +6,7 @@ astroid==3.3.11
     # via pylint
 babel==2.17.0
     # via sphinx
-basedpyright==1.31.5
+basedpyright==1.31.6
     # via vanctransit (pyproject.toml)
 certifi==2025.8.3
     # via
@@ -46,7 +46,7 @@ imagesize==1.4.1
     # via sphinx
 iniconfig==2.1.0
     # via pytest
-isort==6.0.1
+isort==6.1.0
     # via pylint
 jinja2==3.1.6
     # via sphinx
@@ -56,7 +56,7 @@ markupsafe==3.0.3
     # via jinja2
 matplotlib==3.10.6
     # via vanctransit (pyproject.toml)
-maturin==1.9.4
+maturin==1.9.5
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
@@ -172,7 +172,7 @@ requests==2.32.5
     #   sphinx
 roman-numerals-py==3.1.0
     # via sphinx
-ruff==0.13.2
+ruff==0.13.3
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
