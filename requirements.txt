@@ -210,7 +210,7 @@ ty==0.0.1a21
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
-types-setuptools==80.9.0.20250529
+types-setuptools==80.9.0.20250822
     # via vanctransit (pyproject.toml)
 typing-extensions==4.15.0
     # via
@@ -220,7 +220,7 @@ tzdata==2025.2
     # via pandas
 urllib3==2.5.0
     # via requests
-uv==0.8.22
+uv==0.8.23
     # via vanctransit (pyproject.toml)
 vulture==2.14
     # via
