@@ -91,6 +91,12 @@ jobs:
       - name: Install OS prerequisites
         if: startsWith(runner.os, 'Linux')
         run: sudo apt-get update ; sudo apt-get install ripgrep
+      - name: Use basedpyright to measure type-completeness of package (at least 100% for this package)
+        if: startsWith(runner.os, 'Linux')
+        run: |
+          python -u -m basedpyright --ignoreexternal --verifytypes $(python -c 'import pathlib;print([x for x in pathlib.Path("pyproject.toml").read_text().split("\n") if "name = " in x][0].removeprefix("name = \"").removesuffix("\""))') \
+          | rg "Type completeness score" \
+          | python -c 'import sys;verifypct=float(sys.stdin.read().rstrip().split(": ")[1].removesuffix("%"));print(f"Type completeness score: {verifypct}%");sys.exit(0) if verifypct >= 100 else sys.exit(1)'
       - name: Search for existing linter ignore lines in Python
         if: startsWith(runner.os, 'Linux')
         run: |
