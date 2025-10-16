@@ -56,7 +56,7 @@ jobs:
         if: startsWith(runner.os, 'Windows')
         run: Set-ExecutionPolicy Unrestricted -Scope Process; iex (iwr "https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.ps1").Content
       - name: Install useful cargo utilities
-        run: cargo binstall -y cargo-tarpaulin ripgrep sd ;
+        run: cargo binstall -y cargo-tarpaulin ;
       - name: Run cargo clippy (Linter-like checker for Rust code)
         run: cargo clippy --all-targets -- -D warnings ;
 
