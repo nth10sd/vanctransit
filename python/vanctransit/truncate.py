@@ -8,7 +8,8 @@ from typing import Any
 
 # pylint: disable=no-name-in-module
 # import-error  # noqa: ERA001,RUF100
-from vanctransit._vanctransit import (  # pyrefly: ignore[import-error]
+# pylint: disable=line-too-long
+from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]  # pyrefly: ignore[import-error]
     truncate_file_lines,  # pyright: ignore[reportUnknownVariableType]
 )
 
