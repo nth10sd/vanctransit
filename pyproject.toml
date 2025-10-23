@@ -74,7 +74,6 @@ module-name = "vanctransit._vanctransit"
 exclude = ["**/node_modules", "**/__pycache__", "**/.*", "build/", "target/"]
 extraPaths = ["python/"]
 pythonVersion = "3.11"
-reportImplicitStringConcatenation = false  # Other linters cover this in better ways
 typeCheckingMode = "recommended"
 
 [tool.coverage.report]
