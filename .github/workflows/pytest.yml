@@ -60,9 +60,9 @@ jobs:
       - name: Run cargo clippy (Linter-like checker for Rust code)
         run: cargo clippy --all-targets -- -D warnings ;
 
-      - name: Install uv
+      - name: Install uv and ripgrep
         shell: bash
-        run: python -u -m pip install --upgrade uv=="$(python -u -c 'from pathlib import Path;print(list(set([x for x in Path("pyproject.toml").read_text(encoding="utf-8").splitlines() if "uv >= " in x]))[0].split("# ", maxsplit=1)[0].strip().split("\"")[1].removeprefix("uv >= "))')"
+        run: python -u -m pip install --upgrade ripgrep uv=="$(python -u -c 'from pathlib import Path;print(list(set([x for x in Path("pyproject.toml").read_text(encoding="utf-8").splitlines() if "uv >= " in x]))[0].split("# ", maxsplit=1)[0].strip().split("\"")[1].removeprefix("uv >= "))')"
       - name: Remove subdomain to make requirements.txt setup work in CI
         run: python -c 'import fileinput; [print(line.partition("git@")[0] + "git@github.com/" + line.partition(".github.com/")[-1] if (".github.com/" in line and not line.startswith("#")) else line, end="") for line in fileinput.input(inplace=True)]' requirements.txt
       - name: Print differences in git repository needed to make CI work
@@ -88,9 +88,9 @@ jobs:
       - name: Run with refurb to find code that can be written in a more modern way
         run: uvx --with-requirements=pyproject.toml refurb --ignore FURB110 .
 
-      - name: Install OS prerequisites
-        if: startsWith(runner.os, 'Linux')
-        run: sudo apt-get update ; sudo apt-get install ripgrep
+      # - name: Install OS prerequisites
+      #   if: startsWith(runner.os, 'Linux')
+      #   run: sudo apt-get update ; sudo apt-get install ripgrep
       - name: Use basedpyright to measure type-completeness of package (at least 100% for this package)
         if: startsWith(runner.os, 'Linux')
         run: |
