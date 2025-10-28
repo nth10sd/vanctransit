@@ -122,7 +122,7 @@ pyqt6-qt6==6.9.2
     # via pyqt6
 pyqt6-sip==13.10.2
     # via pyqt6
-pyrefly==0.38.2
+pyrefly==0.39.1
     # via vanctransit (pyproject.toml)
 pytest==8.4.2
     # via
