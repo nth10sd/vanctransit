@@ -122,7 +122,7 @@ pyqt6-qt6==6.9.2
     # via pyqt6
 pyqt6-sip==13.10.2
     # via pyqt6
-pyrefly==0.39.1
+pyrefly==0.40.0
     # via vanctransit (pyproject.toml)
 pytest==8.4.2
     # via
@@ -172,7 +172,7 @@ requests==2.32.5
     #   sphinx
 roman-numerals-py==3.1.0
     # via sphinx
-ruff==0.14.2
+ruff==0.14.3
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
@@ -206,7 +206,7 @@ tomli==2.3.0 ; python_full_version <= '3.11'
     # via coverage
 tomlkit==0.13.3
     # via pylint
-ty==0.0.1a24
+ty==0.0.1a25
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
@@ -220,7 +220,7 @@ tzdata==2025.2
     # via pandas
 urllib3==2.5.0
     # via requests
-uv==0.9.5
+uv==0.9.7
     # via vanctransit (pyproject.toml)
 vulture==2.14
     # via
