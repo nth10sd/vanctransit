@@ -215,7 +215,7 @@ search-path = [
     "python/",
 ]
 
-[tool.pytest.ini_options]
+[tool.pytest]
 addopts = [
     "-n=auto",
     "--dist=loadscope",
