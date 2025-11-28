@@ -79,7 +79,7 @@ numpy==2.3.5
     #   pandas
     #   pyogrio
     #   shapely
-osmnx==2.0.6
+osmnx==2.0.7
     # via vanctransit (pyproject.toml)
 packaging==25.0
     # via
@@ -110,7 +110,7 @@ pylint==3.3.9
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-pylint
-pyogrio==0.11.1
+pyogrio==0.12.0
     # via geopandas
 pyparsing==3.2.5
     # via matplotlib
@@ -206,7 +206,7 @@ tomli==2.3.0 ; python_full_version <= '3.11'
     # via coverage
 tomlkit==0.13.3
     # via pylint
-ty==0.0.1a27
+ty==0.0.1a28
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
@@ -220,7 +220,7 @@ tzdata==2025.2
     # via pandas
 urllib3==2.5.0
     # via requests
-uv==0.9.11
+uv==0.9.13
     # via vanctransit (pyproject.toml)
 vulture==2.14
     # via
