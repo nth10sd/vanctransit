@@ -30,11 +30,11 @@ cycler==0.12.1
     # via matplotlib
 dill==0.4.0
     # via pylint
-docutils==0.22.3
+docutils==0.22.4
     # via sphinx
 execnet==2.1.2
     # via pytest-xdist
-filelock==3.20.0
+filelock==3.20.1
     # via pytest-mypy
 fonttools==4.61.1
     # via matplotlib
@@ -52,7 +52,7 @@ jinja2==3.1.6
     # via sphinx
 kiwisolver==1.4.9
     # via matplotlib
-librt==0.7.3
+librt==0.7.4 ; platform_python_implementation != 'PyPy'
     # via mypy
 markupsafe==3.0.3
     # via jinja2
@@ -62,7 +62,7 @@ maturin==1.10.2
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
-mypy==1.19.0
+mypy==1.19.1
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-mypy
@@ -124,7 +124,7 @@ pyqt6-qt6==6.9.2
     # via pyqt6
 pyqt6-sip==13.10.3
     # via pyqt6
-pyrefly==0.45.2
+pyrefly==0.46.0
     # via vanctransit (pyproject.toml)
 pytest==9.0.2
     # via
@@ -172,9 +172,9 @@ requests==2.32.5
     # via
     #   osmnx
     #   sphinx
-roman-numerals==3.1.0
+roman-numerals==4.1.0
     # via sphinx
-ruff==0.14.9
+ruff==0.14.10
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
@@ -208,7 +208,7 @@ tomli==2.3.0 ; python_full_version <= '3.11'
     # via coverage
 tomlkit==0.13.3
     # via pylint
-ty==0.0.1a34
+ty==0.0.4
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
@@ -222,7 +222,7 @@ tzdata==2025.3
     # via pandas
 urllib3==2.6.2
     # via requests
-uv==0.9.17
+uv==0.9.18
     # via vanctransit (pyproject.toml)
 vulture==2.14
     # via
