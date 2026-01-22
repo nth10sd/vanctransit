@@ -2,7 +2,7 @@
 requires = [
     "maturin ~= 1.11.5",
     "setuptools==80.9.0",
-    "wheel==0.45.1",
+    "wheel==0.46.2",
 ]
 build-backend = "maturin"
 
@@ -30,7 +30,7 @@ dependencies = [
     "types-setuptools==80.9.0.20250822",        # Bump types-* only with mypy
     "typing-extensions ~= 4.15.0",
     "uv >= 0.9.26",        # CI looks out for the comparison: >=
-    "wheel==0.45.1",
+    "wheel==0.46.2",
 ]
 dynamic = ["version", "readme"]
 
