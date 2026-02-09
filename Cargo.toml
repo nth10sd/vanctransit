@@ -1,12 +1,12 @@
 [package]
 name = "vanctransit"
-version = "0.1.0" # Also update version in __init__.py, Cargo.toml and package.json
+version = "0.1.0"  # Also update version in __init__.py, Cargo.toml and package.json
 edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
-name = "vanctransit"
 crate-type = ["cdylib"]
+name = "vanctransit"
 
 [dependencies]
 file_diff = "1.0.0"
@@ -14,20 +14,19 @@ testdir = "0.9.1"
 
 [dependencies.pyo3]
 version = "0.28.0"
-features = ["abi3-py311"] # Python 3.11
+features = ["abi3-py311"]  # Python 3.11
 
 [lints.clippy]
 all = "warn"
-pedantic = "warn"
 nursery = "warn"
-
-redundant_pub_crate = { level = "allow", priority = 1 } # Seems needed by maturin
+pedantic = "warn"
+redundant_pub_crate = { level = "allow", priority = 1 }  # Seems needed by maturin
 
 [lints.rust]
-unexpected_cfgs = { level = "warn", check-cfg = ['cfg(tarpaulin_include)'] }
-unsafe_code = "forbid"                                                       # Allow unsafe code only if you understand what you are doing
+unexpected_cfgs = { level = "warn", check-cfg = ["cfg(tarpaulin_include)"] }
+unsafe_code = "forbid"  # Allow unsafe code only if you understand what you are doing
 
 [profile.release]
 # debug = true      # Debug symbols for our profiler.
-lto = true        # Link-time optimization.
-codegen-units = 1 # Slower compilation but faster code.
+lto = true  # Link-time optimization.
+codegen-units = 1  # Slower compilation but faster code.
