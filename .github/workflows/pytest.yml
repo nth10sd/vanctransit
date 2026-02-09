@@ -77,6 +77,10 @@ jobs:
       - name: Install using maturin, optimized Rust code
         run: env VIRTUAL_ENV=$(python -c 'import sys; print(sys.base_prefix)') maturin develop --release ;
 
+      - name: Run with the tombi linter on TOML files
+        run: uvx tombi lint
+      - name: Run with the tombi formatter on TOML files
+        run: uvx tombi format --check
       - name: Run with ruff
         run: python -u -m ruff check
       - name: Run with ty, but ignore unresolved-import error (and hence the unused-ignore-comment error) only on CI, due to CI venv differences
