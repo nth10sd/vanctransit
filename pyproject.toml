@@ -118,7 +118,7 @@ warn_unreachable = true
 
 # Add Python modules to be ignored by mypy here
 [[tool.mypy.overrides]]
-module = ["osmnx", "vanctransit._vanctransit"]
+module = ["vanctransit._vanctransit"]
 ignore_missing_imports = true
 
 [tool.pylint.basic]
