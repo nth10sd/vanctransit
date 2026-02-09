@@ -225,15 +225,14 @@ addopts = [
     "--no-cov-on-fail",
     "--order-dependencies",
     "--pylint-error-types=CRWEFI",
-    "--strict-markers",
 ]
 filterwarnings = [
     "error::UserWarning",  # Only beartype issues in this package are interesting
 ]
 log_level = "DEBUG"
 markers = ["online", "slow"]
+strict = true
 testpaths = ["python/tests/"]
-xfail_strict = true
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
