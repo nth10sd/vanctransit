@@ -6,7 +6,7 @@ astroid==4.0.4
     # via pylint
 babel==2.18.0
     # via sphinx
-basedpyright==1.37.4
+basedpyright==1.38.0
     # via vanctransit (pyproject.toml)
 certifi==2026.1.4
     # via
@@ -34,7 +34,7 @@ docutils==0.22.4
     # via sphinx
 execnet==2.1.2
     # via pytest-xdist
-filelock==3.20.3
+filelock==3.21.2
     # via pytest-mypy
 fonttools==4.61.1
     # via matplotlib
@@ -52,7 +52,7 @@ jinja2==3.1.6
     # via sphinx
 kiwisolver==1.4.9
     # via matplotlib
-librt==0.7.8 ; platform_python_implementation != 'PyPy'
+librt==0.8.0 ; platform_python_implementation != 'PyPy'
     # via mypy
 markupsafe==3.0.3
     # via jinja2
@@ -70,7 +70,7 @@ mypy-extensions==1.1.0
     # via mypy
 networkx==3.6.1
     # via osmnx
-nodejs-wheel-binaries==24.13.0
+nodejs-wheel-binaries==24.13.1
     # via basedpyright
 numpy==2.4.2
     # via
@@ -99,7 +99,7 @@ pathspec==1.0.4
     # via mypy
 pillow==12.1.1
     # via matplotlib
-platformdirs==4.5.1
+platformdirs==4.7.0
     # via pylint
 pluggy==1.6.0
     # via
@@ -119,9 +119,9 @@ pyparsing==3.3.2
     # via matplotlib
 pyproj==3.7.2
     # via geopandas
-pyqt6==6.9.1
+pyqt6==6.10.2
     # via vanctransit (pyproject.toml)
-pyqt6-qt6==6.9.2
+pyqt6-qt6==6.10.2
     # via pyqt6
 pyqt6-sip==13.11.0
     # via pyqt6
@@ -170,11 +170,11 @@ requests==2.32.5
     #   sphinx
 roman-numerals==4.1.0
     # via sphinx
-ruff==0.15.0
+ruff==0.15.1
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
-setuptools==80.10.2
+setuptools==82.0.0
     # via vanctransit (pyproject.toml)
 shapely==2.1.2
     # via
@@ -202,11 +202,11 @@ tomli==2.4.0 ; python_full_version <= '3.11'
     # via coverage
 tomlkit==0.14.0
     # via pylint
-ty==0.0.15
+ty==0.0.16
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
-types-setuptools==80.10.0.20260124
+types-setuptools==82.0.0.20260210
     # via vanctransit (pyproject.toml)
 typing-extensions==4.15.0
     # via
@@ -216,7 +216,7 @@ tzdata==2025.3 ; sys_platform == 'emscripten' or sys_platform == 'win32'
     # via pandas
 urllib3==2.6.3
     # via requests
-uv==0.10.0
+uv==0.10.2
     # via vanctransit (pyproject.toml)
 vulture==2.14
     # via
