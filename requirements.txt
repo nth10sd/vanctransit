@@ -6,9 +6,9 @@ astroid==4.0.4
     # via pylint
 babel==2.18.0
     # via sphinx
-basedpyright==1.38.1
+basedpyright==1.38.2
     # via vanctransit (pyproject.toml)
-certifi==2026.1.4
+certifi==2026.2.25
     # via
     #   pyogrio
     #   pyproj
@@ -46,7 +46,7 @@ imagesize==1.4.1
     # via sphinx
 iniconfig==2.3.0
     # via pytest
-isort==7.0.0
+isort==8.0.0
     # via pylint
 jinja2==3.1.6
     # via sphinx
@@ -58,7 +58,7 @@ markupsafe==3.0.3
     # via jinja2
 matplotlib==3.10.8
     # via vanctransit (pyproject.toml)
-maturin==1.12.3
+maturin==1.12.4
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
@@ -109,7 +109,7 @@ pygments==2.19.2
     # via
     #   pytest
     #   sphinx
-pylint==4.0.4
+pylint==4.0.5
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-pylint
@@ -125,7 +125,7 @@ pyqt6-qt6==6.10.2
     # via pyqt6
 pyqt6-sip==13.11.0
     # via pyqt6
-pyrefly==0.53.0
+pyrefly==0.54.0
     # via vanctransit (pyproject.toml)
 pytest==9.0.2
     # via
@@ -170,7 +170,7 @@ requests==2.32.5
     #   sphinx
 roman-numerals==4.1.0
     # via sphinx
-ruff==0.15.2
+ruff==0.15.3
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
@@ -202,7 +202,7 @@ tomli==2.4.0 ; python_full_version <= '3.11'
     # via coverage
 tomlkit==0.14.0
     # via pylint
-ty==0.0.17
+ty==0.0.19
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
@@ -216,7 +216,7 @@ tzdata==2025.3 ; sys_platform == 'emscripten' or sys_platform == 'win32'
     # via pandas
 urllib3==2.6.3
     # via requests
-uv==0.10.4
+uv==0.10.6
     # via vanctransit (pyproject.toml)
 vulture==2.14
     # via
