@@ -70,7 +70,7 @@ mypy-extensions==1.1.0
     # via mypy
 networkx==3.6.1
     # via osmnx
-nodejs-wheel-binaries==24.13.1
+nodejs-wheel-binaries==24.14.0
     # via basedpyright
 numpy==2.4.2
     # via
@@ -170,7 +170,7 @@ requests==2.32.5
     #   sphinx
 roman-numerals==4.1.0
     # via sphinx
-ruff==0.15.3
+ruff==0.15.4
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
@@ -216,7 +216,7 @@ tzdata==2025.3 ; sys_platform == 'emscripten' or sys_platform == 'win32'
     # via pandas
 urllib3==2.6.3
     # via requests
-uv==0.10.6
+uv==0.10.7
     # via vanctransit (pyproject.toml)
 vulture==2.14
     # via
