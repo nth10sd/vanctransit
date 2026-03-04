@@ -34,7 +34,7 @@ docutils==0.22.4
     # via sphinx
 execnet==2.1.2
     # via pytest-xdist
-filelock==3.24.3
+filelock==3.25.0
     # via pytest-mypy
 fonttools==4.61.1
     # via matplotlib
@@ -42,11 +42,11 @@ geopandas==1.1.2
     # via osmnx
 idna==3.11
     # via requests
-imagesize==1.4.1
+imagesize==2.0.0
     # via sphinx
 iniconfig==2.3.0
     # via pytest
-isort==8.0.0
+isort==8.0.1
     # via pylint
 jinja2==3.1.6
     # via sphinx
@@ -58,7 +58,7 @@ markupsafe==3.0.3
     # via jinja2
 matplotlib==3.10.8
     # via vanctransit (pyproject.toml)
-maturin==1.12.4
+maturin==1.12.6
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
@@ -125,7 +125,7 @@ pyqt6-qt6==6.10.2
     # via pyqt6
 pyqt6-sip==13.11.0
     # via pyqt6
-pyrefly==0.54.0
+pyrefly==0.55.0
     # via vanctransit (pyproject.toml)
 pytest==9.0.2
     # via
@@ -202,7 +202,7 @@ tomli==2.4.0 ; python_full_version <= '3.11'
     # via coverage
 tomlkit==0.14.0
     # via pylint
-ty==0.0.19
+ty==0.0.20
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
@@ -216,7 +216,7 @@ tzdata==2025.3 ; sys_platform == 'emscripten' or sys_platform == 'win32'
     # via pandas
 urllib3==2.6.3
     # via requests
-uv==0.10.7
+uv==0.10.8
     # via vanctransit (pyproject.toml)
 vulture==2.14
     # via
