@@ -1,12 +1,11 @@
 [project]
 name = "vanctransit"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 classifiers = [
   "Development Status :: 2 - Pre-Alpha",
   "Intended Audience :: Developers",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
@@ -65,7 +64,7 @@ build-backend = "maturin"
 [tool.basedpyright]
 exclude = ["**/node_modules", "**/__pycache__", "**/.*", "build/", "target/"]
 extraPaths = ["python/"]
-pythonVersion = "3.11"
+pythonVersion = "3.12"
 reportImplicitStringConcatenation = false  # Other linters cover this in better ways
 typeCheckingMode = "recommended"
 
@@ -112,7 +111,7 @@ enable_error_code = "deprecated,exhaustive-match,explicit-override,ignore-withou
 exclude = ["build/", "target/"]
 namespace_packages = true
 pretty = true
-python_version = "3.11"
+python_version = "3.12"
 strict = true
 warn_unreachable = true
 
@@ -207,11 +206,11 @@ min-similarity-lines = 8
 [tool.pylint.typing]
 # Min Python version to use for typing related checks, e.g. ``3.7``
 # This should be equal to the min supported Python version of the project
-py-version = "3.11"
+py-version = "3.12"
 
 [tool.pyrefly]
 project-excludes = ["build/"]
-python-version = "3.11"
+python-version = "3.12"
 search-path = [
   "python/",
 ]
@@ -284,7 +283,7 @@ exclude = [
   "venv",
 ]
 include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.lint]
 external = [
