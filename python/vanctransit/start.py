@@ -8,13 +8,13 @@ from typing import cast
 # pylint: disable=no-name-in-module
 # import-error  # noqa: ERA001,RUF100
 # pylint: disable=line-too-long
-from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]  # pyrefly: ignore[missing-import]
+from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]  # zuban: ignore[import-not-found]  # pyrefly: ignore[missing-import]
     print_something,  # pyright: ignore[reportUnknownVariableType]
 )
 
 # import-error  # noqa: ERA001,RUF100
 # pylint: disable=line-too-long
-from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]  # pyrefly: ignore[missing-import]
+from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]  # zuban: ignore[import-not-found]  # pyrefly: ignore[missing-import]
     sum_as_string,  # pyright: ignore[reportUnknownVariableType]
 )
 from vanctransit.util.logging import get_logger

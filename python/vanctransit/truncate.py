@@ -9,7 +9,7 @@ from typing import Any
 # pylint: disable=no-name-in-module
 # import-error  # noqa: ERA001,RUF100
 # pylint: disable=line-too-long
-from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]  # pyrefly: ignore[missing-import]
+from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]  # zuban: ignore[import-not-found]  # pyrefly: ignore[missing-import]
     truncate_file_lines,  # pyright: ignore[reportUnknownVariableType]
 )
 
@@ -40,8 +40,14 @@ def py_truncate_file_lines(  # vulture: ignore
         str(Path(filename).suffix.removesuffix("~"))
     )
     # Needs to be opened in binary mode or else Windows uses CRLF instead of LF
-    with temp_file.open("rb") as f, target_file.open("wb") as g:
-        g.writelines(line.replace(b"\r\n", b"\n") for line in f)
+    with (
+        temp_file.open("rb") as f,  # zuban: ignore[assignment]
+        target_file.open("wb") as g,  # zuban: ignore[assignment]
+    ):
+        g.writelines(
+            line.replace(b"\r\n", b"\n")  # zuban: ignore[call-overload]
+            for line in f
+        )
     temp_file.unlink()
 
 

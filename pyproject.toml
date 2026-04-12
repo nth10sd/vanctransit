@@ -345,3 +345,10 @@ error-on-warning = true  # Quits with a non-zero exit code if a warning appears
 check-entry-points = 0  # maturin repos only
 exclude = ["build/", "docs/source/conf_correct.py"]
 make_whitelist = true
+
+[tool.zuban]
+disallow_any_unimported = true
+disallow_any_explicit = true
+strict = true
+untyped_function_return_mode = "advanced"
+untyped_strict_optional = false
