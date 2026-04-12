@@ -14,13 +14,13 @@ classifiers = [
 ]
 dependencies = [
   "matplotlib ~= 3.10.8",
-  "maturin ~= 1.12.6",
-  "osmnx ~= 2.0.7",
-  "pyqt6 ~= 6.10.2",
-  "setuptools==82.0.0",
-  "types-setuptools==82.0.0.20260210",  # Bump types-* only with mypy
+  "maturin ~= 1.13.1",
+  "osmnx ~= 2.1.0",
+  "pyqt6 ~= 6.11.0",
+  "setuptools==82.0.1",
+  "types-setuptools==82.0.0.20260408",  # Bump types-* only with mypy
   "typing-extensions ~= 4.15.0",
-  "uv >= 0.10.2",
+  "uv >= 0.11.6",
   "wheel >= 0.46.3",
 ]
 dynamic = ["readme", "version"]
@@ -31,13 +31,13 @@ print_something = "vanctransit._vanctransit:print_something"
 
 [project.optional-dependencies]
 test = [
-  "basedpyright ~= 1.38.2",
-  "coverage ~= 7.13.4",
-  "mypy ~= 1.19.1",
+  "basedpyright ~= 1.39.0",
+  "coverage ~= 7.13.5",
+  "mypy ~= 1.20.0",
   "pylint ~= 4.0.5",
-  "pyrefly ~= 0.56.0",
-  "pytest ~= 9.0.2",
-  "pytest-cov ~= 7.0.0",
+  "pyrefly ~= 0.60.2",
+  "pytest ~= 9.0.3",
+  "pytest-cov ~= 7.1.0",
   "pytest-instafail ~= 0.5.0",
   "pytest-mypy ~= 1.0.1",
   "pytest-order ~= 1.3.0",
@@ -47,16 +47,16 @@ test = [
   "pytest-ty ~= 0.2.0",
   "pytest-vulture ~= 2.2.2",
   "pytest-xdist ~= 3.8.0",
-  "ruff ~= 0.15.5",
+  "ruff ~= 0.15.10",
   "sphinx ~= 9.0.4",
-  "ty ~= 0.0.21",
-  "vulture ~= 2.15",
+  "ty ~= 0.0.29",
+  "vulture ~= 2.16",
 ]
 
 [build-system]
 requires = [
-  "maturin ~= 1.12.6",
-  "setuptools==82.0.0",
+  "maturin ~= 1.13.1",
+  "setuptools==82.0.1",
   "wheel >= 0.46.3",
 ]
 build-backend = "maturin"

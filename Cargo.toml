@@ -10,10 +10,10 @@ name = "vanctransit"
 
 [dependencies]
 file_diff = "1.0.0"
-testdir = "0.9.1"
+testdir = "0.10.0"
 
 [dependencies.pyo3]
-version = "0.28.2"
+version = "0.28.3"
 features = ["abi3-py312"]  # Python 3.12
 
 [lints.clippy]
