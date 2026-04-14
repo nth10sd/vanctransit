@@ -62,7 +62,7 @@ maturin==1.13.1
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
-mypy==1.20.0
+mypy==1.20.1
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-mypy
@@ -125,7 +125,7 @@ pyqt6-qt6==6.11.0
     # via pyqt6
 pyqt6-sip==13.11.1
     # via pyqt6
-pyrefly==0.60.2
+pyrefly==0.61.0
     # via vanctransit (pyproject.toml)
 pytest==9.0.3
     # via
@@ -184,7 +184,7 @@ six==1.17.0
     # via python-dateutil
 snowballstemmer==3.0.1
     # via sphinx
-sphinx==9.0.4
+sphinx==9.1.0
     # via vanctransit (pyproject.toml)
 sphinxcontrib-applehelp==2.0.0
     # via sphinx
@@ -200,7 +200,7 @@ sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
 tomlkit==0.14.0
     # via pylint
-ty==0.0.29
+ty==0.0.30
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
