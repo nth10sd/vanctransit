@@ -20,7 +20,10 @@ features = ["abi3-py312"]  # Python 3.12
 all = "warn"
 nursery = "warn"
 pedantic = "warn"
-redundant_pub_crate = { level = "allow", priority = 1 }  # Seems needed by maturin
+redundant_pub_crate = {
+  level = "allow",
+  priority = 1
+}  # Seems needed by maturin
 
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ["cfg(tarpaulin_include)"] }
