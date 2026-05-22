@@ -64,7 +64,7 @@ maturin==1.13.3
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
-mypy==2.1.0
+mypy==2.0.0
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-mypy
@@ -127,7 +127,7 @@ pyqt6-qt6==6.11.1
     # via pyqt6
 pyqt6-sip==13.11.1
     # via pyqt6
-pyrefly==1.0.0
+pyrefly==0.63.1
     # via vanctransit (pyproject.toml)
 pytest==9.0.3
     # via
