@@ -8,9 +8,9 @@ astroid==4.0.4
     # via pylint
 babel==2.18.0
     # via sphinx
-basedpyright==1.39.6
+basedpyright==1.39.8
     # via vanctransit (pyproject.toml)
-certifi==2026.5.20
+certifi==2026.6.17
     # via
     #   pyogrio
     #   pyproj
@@ -36,7 +36,7 @@ docutils==0.22.4
     # via sphinx
 execnet==2.1.2
     # via pytest-xdist
-filelock==3.29.1
+filelock==3.29.4
     # via pytest-mypy
 fonttools==4.63.0
     # via matplotlib
@@ -60,7 +60,7 @@ markupsafe==3.0.3
     # via jinja2
 matplotlib==3.10.9
     # via vanctransit (pyproject.toml)
-maturin==1.13.3
+maturin==1.14.0
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
@@ -111,7 +111,7 @@ pygments==2.20.0
     # via
     #   pytest
     #   sphinx
-pylint==4.0.5
+pylint==4.0.6
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-pylint
@@ -127,7 +127,7 @@ pyqt6-qt6==6.11.1
     # via pyqt6
 pyqt6-sip==13.11.1
     # via pyqt6
-pyrefly==0.63.1
+pyrefly==1.1.1
     # via vanctransit (pyproject.toml)
 pytest==9.0.3
     # via
@@ -148,7 +148,7 @@ pytest-instafail==0.5.0
     # via vanctransit (pyproject.toml)
 pytest-mypy==1.0.1
     # via vanctransit (pyproject.toml)
-pytest-order==1.4.0
+pytest-order==1.5.0
     # via vanctransit (pyproject.toml)
 pytest-pylint==0.21.0
     # via vanctransit (pyproject.toml)
@@ -172,7 +172,7 @@ requests==2.34.2
     #   sphinx
 roman-numerals==4.1.0
     # via sphinx
-ruff==0.15.16
+ruff==0.15.18
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
@@ -202,7 +202,7 @@ sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
 tomlkit==0.15.0
     # via pylint
-ty==0.0.44
+ty==0.0.50
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
@@ -216,7 +216,7 @@ tzdata==2026.2 ; sys_platform == 'emscripten' or sys_platform == 'win32'
     # via pandas
 urllib3==2.7.0
     # via requests
-uv==0.11.19
+uv==0.11.22
     # via vanctransit (pyproject.toml)
 vulture==2.16
     # via
@@ -224,5 +224,5 @@ vulture==2.16
     #   pytest-vulture
 wheel==0.47.0
     # via vanctransit (pyproject.toml)
-zuban==0.8.0
+zuban==0.8.2
     # via vanctransit (pyproject.toml)
