@@ -2,20 +2,20 @@
 #    uv pip compile pyproject.toml requirements.in --all-extras --no-strip-extras --no-strip-markers --universal --output-file requirements.txt
 alabaster==1.0.0
     # via sphinx
-ast-serialize==0.6.0
+ast-serialize==0.8.0
     # via mypy
 astroid==4.0.4
     # via pylint
 babel==2.18.0
     # via sphinx
-basedpyright==1.39.9
+basedpyright==1.39.10
     # via vanctransit (pyproject.toml)
 certifi==2026.7.22
     # via
     #   pyogrio
     #   pyproj
     #   requests
-charset-normalizer==3.4.9
+charset-normalizer==3.5.1
     # via requests
 colorama==0.4.6 ; sys_platform == 'win32'
     # via
@@ -24,7 +24,7 @@ colorama==0.4.6 ; sys_platform == 'win32'
     #   sphinx
 contourpy==1.3.3
     # via matplotlib
-coverage[toml]==7.15.2
+coverage[toml]==7.15.4
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-cov
@@ -36,7 +36,7 @@ docutils==0.22.4
     # via sphinx
 execnet==2.1.2
     # via pytest-xdist
-filelock==3.32.0
+filelock==3.32.3
     # via pytest-mypy
 fonttools==4.63.0
     # via matplotlib
@@ -54,7 +54,7 @@ jinja2==3.1.6
     # via sphinx
 kiwisolver==1.5.0
     # via matplotlib
-librt==0.13.0 ; platform_python_implementation != 'PyPy'
+librt==0.15.0 ; platform_python_implementation != 'PyPy'
     # via mypy
 markupsafe==3.0.3
     # via jinja2
@@ -64,7 +64,7 @@ maturin==1.14.1
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
-mypy==2.3.0
+mypy==2.3.1
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-mypy
@@ -74,7 +74,7 @@ networkx==3.6.1
     # via osmnx
 nodejs-wheel-binaries==24.16.0
     # via basedpyright
-numpy==2.5.1
+numpy==2.5.2
     # via
     #   contourpy
     #   geopandas
@@ -85,7 +85,7 @@ numpy==2.5.1
     #   shapely
 osmnx==2.1.1
     # via vanctransit (pyproject.toml)
-packaging==26.2
+packaging==26.3
     # via
     #   geopandas
     #   matplotlib
@@ -101,17 +101,17 @@ pathspec==1.1.1
     # via mypy
 pillow==12.3.0
     # via matplotlib
-platformdirs==4.11.0
+platformdirs==4.11.3
     # via pylint
 pluggy==1.6.0
     # via
     #   pytest
     #   pytest-cov
-pygments==2.20.0
+pygments==2.21.0
     # via
     #   pytest
     #   sphinx
-pylint==4.0.6
+pylint==4.0.7
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-pylint
@@ -125,9 +125,9 @@ pyqt6==6.11.0
     # via vanctransit (pyproject.toml)
 pyqt6-qt6==6.11.1
     # via pyqt6
-pyqt6-sip==13.11.1
+pyqt6-sip==13.12.0
     # via pyqt6
-pyrefly==1.1.1
+pyrefly==1.2.0
     # via vanctransit (pyproject.toml)
 pytest==9.0.3
     # via
@@ -172,7 +172,7 @@ requests==2.34.2
     #   sphinx
 roman-numerals==4.1.0
     # via sphinx
-ruff==0.16.0
+ruff==0.16.3
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ruff
@@ -202,7 +202,7 @@ sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
 tomlkit==0.15.1
     # via pylint
-ty==0.0.63
+ty==0.0.72
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
@@ -216,13 +216,13 @@ tzdata==2026.3 ; sys_platform == 'emscripten' or sys_platform == 'win32'
     # via pandas
 urllib3==2.7.0
     # via requests
-uv==0.11.32
+uv==0.12.5
     # via vanctransit (pyproject.toml)
 vulture==2.16
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-vulture
-wheel==0.47.0
+wheel==0.48.0
     # via vanctransit (pyproject.toml)
-zuban==0.9.0
+zuban==0.9.1
     # via vanctransit (pyproject.toml)
