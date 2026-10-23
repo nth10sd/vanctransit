@@ -9,9 +9,7 @@ from typing import Any
 # pylint: disable=no-name-in-module
 # import-error  # noqa: ERA001,RUF100
 # pylint: disable=line-too-long
-from vanctransit._vanctransit import (  # ty: ignore[unresolved-import]  # zuban: ignore[import-not-found]  # pyrefly: ignore[missing-import]
-    truncate_file_lines,  # pyright: ignore[reportUnknownVariableType]
-)
+from vanctransit._vanctransit import truncate_file_lines  # ty: ignore[unresolved-import]  # zuban: ignore[import-not-found]  # pyrefly: ignore[missing-import]  # pyright: ignore[reportUnknownVariableType]
 
 if TYPE_CHECKING:
     from collections.abc import Callable
