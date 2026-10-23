@@ -25,7 +25,7 @@ def get_logger(
     handler = logging.StreamHandler(sys.stdout)
     # See https://github.com/python/mypy/issues/2427
     # pylint: disable-next=line-too-long
-    handler.flush = sys.stdout.flush  # type: ignore[method-assign]  # ty: ignore[invalid-assignment]
+    handler.flush = sys.stdout.flush  # type: ignore[method-assign]  # ty: ignore[invalid-assignment]  # pyrefly: ignore[method-assign]
     handler.terminator = terminator
     handler.setFormatter(logging.Formatter(fmt=fmt, datefmt="%b %d %H:%M:%S"))
 

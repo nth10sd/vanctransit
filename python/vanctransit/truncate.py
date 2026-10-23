@@ -35,7 +35,7 @@ def py_truncate_file_lines(  # vulture: ignore
             _ = g.write(line)
 
     target_file = temp_file.with_suffix("").with_suffix(
-        str(Path(filename).suffix.removesuffix("~"))
+        Path(filename).suffix.removesuffix("~")
     )
     # Needs to be opened in binary mode or else Windows uses CRLF instead of LF
     with (
@@ -60,8 +60,7 @@ def fast_py_truncate_file_lines(  # vulture: ignore
     :param lines_wanted: Desired number of lines to retain
     """
     with Path(filename).open("r+", encoding="utf-8", errors="surrogateescape") as f:
-        # pylint: disable-next=line-too-long
-        blackhole: Callable[[Iterable[Any]], None]  # type: ignore[explicit-any]  # pyright: ignore[reportExplicitAny]
+        blackhole: Callable[[Iterable[Any]], None]  # type: ignore[explicit-any]  # pyrefly: ignore[explicit-any]  # pyright: ignore[reportExplicitAny]
         blackhole = deque(maxlen=0).extend  # pyright: ignore[reportUnknownMemberType,reportUnknownVariableType]
         file_iterator = iter(f.readline, "")
         blackhole(islice(file_iterator, lines_wanted))  # type: ignore[arg-type]

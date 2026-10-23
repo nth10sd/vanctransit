@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from logging import INFO as INFO_LOG_LEVEL
+import logging
 from typing import cast
 
 # pylint: disable=no-name-in-module
@@ -16,8 +16,8 @@ from vanctransit._vanctransit import sum_as_string  # ty: ignore[unresolved-impo
 from vanctransit.util.logging import get_logger
 from vanctransit.util.utils import add_one
 
-RUN_LOG = get_logger(__name__)
-RUN_LOG.setLevel(INFO_LOG_LEVEL)
+RUN_LOG: logging.Logger = get_logger(__name__)
+RUN_LOG.setLevel(logging.INFO)
 
 
 def main() -> None:
