@@ -220,6 +220,9 @@ search-path = [
   "python/",
 ]
 
+[tool.pyrefly.errors]
+implicit-bool = false  # Seems to go against our regular Python convention
+
 [tool.pytest]
 addopts = [
   "--dist=loadscope",
