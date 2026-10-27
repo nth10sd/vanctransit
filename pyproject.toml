@@ -67,7 +67,7 @@ exclude = ["**/node_modules", "**/__pycache__", "**/.*", "build/", "target/"]
 extraPaths = ["python/"]
 pythonVersion = "3.12"
 reportImplicitStringConcatenation = false  # Other linters cover this in better ways
-typeCheckingMode = "recommended"
+typeCheckingMode = "all"
 
 [tool.coverage.report]
 # Taken from: https://coverage.readthedocs.io/en/coverage-5.5/config.html#syntax
