@@ -25,7 +25,8 @@ jobs:
       UV_CACHE_DIR: /tmp/.uv-cache
       UV_SYSTEM_PYTHON: 1
     steps:
-      - name: Free Disk Space (Ubuntu)
+      - name: Free disk space (regular GitHub Actions Ubuntu images)
+        if: startsWith(runner.os, 'Linux')
         uses: jlumbroso/free-disk-space@v2
         with:
           # Turn off Android, .NET and Haskell stuff for now
