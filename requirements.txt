@@ -38,7 +38,7 @@ execnet==2.1.2
     # via pytest-xdist
 filelock==4.2.4
     # via pytest-mypy
-fonttools==4.67.0
+fonttools==4.68.0
     # via matplotlib
 geopandas==1.2.0
     # via osmnx
@@ -64,7 +64,7 @@ maturin==1.15.0
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
-mypy==2.4.0
+mypy==2.4.1
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-mypy
@@ -103,7 +103,7 @@ pathspec==1.1.1
     # via mypy
 pillow==13.0.0
     # via matplotlib
-platformdirs==4.13.5
+platformdirs==4.14.0
     # via pylint
 pluggy==1.7.0
     # via
@@ -123,9 +123,9 @@ pyparsing==3.3.3
     # via matplotlib
 pyproj==3.8.0
     # via geopandas
-pyqt6==6.11.0
+pyqt6==6.12.0
     # via vanctransit (pyproject.toml)
-pyqt6-qt6==6.11.2
+pyqt6-qt6==6.12.0
     # via pyqt6
 pyqt6-sip==13.13.0
     # via pyqt6
@@ -204,17 +204,17 @@ sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
 tomlkit==0.15.2
     # via pylint
-ty==0.0.92
+ty==0.0.94
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
 types-setuptools==84.0.0.20261006
     # via vanctransit (pyproject.toml)
-typing-extensions==4.15.0
+typing-extensions==4.16.0
     # via
     #   vanctransit (pyproject.toml)
     #   mypy
-tzdata==2026.5
+tzdata==2026.6
     # via
     #   pandas
     #   python-dateutil
