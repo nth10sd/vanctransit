@@ -60,7 +60,7 @@ markupsafe==3.0.4
     # via jinja2
 matplotlib==3.11.2
     # via vanctransit (pyproject.toml)
-maturin==1.15.0
+maturin==1.16.0
     # via vanctransit (pyproject.toml)
 mccabe==0.7.0
     # via pylint
@@ -204,7 +204,7 @@ sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
 tomlkit==0.15.2
     # via pylint
-ty==0.0.94
+ty==0.0.95
     # via
     #   vanctransit (pyproject.toml)
     #   pytest-ty
@@ -228,5 +228,5 @@ vulture==2.16
     #   pytest-vulture
 wheel==0.48.0
     # via vanctransit (pyproject.toml)
-zuban==0.10.1
+zuban==0.10.2
     # via vanctransit (pyproject.toml)
